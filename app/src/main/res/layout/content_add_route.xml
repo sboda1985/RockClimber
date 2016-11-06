@@ -96,10 +96,10 @@
         android:id="@+id/textView7"
         android:lines="4"
         android:textSize="20dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="62dp" />
+        android:layout_marginTop="43dp" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -158,10 +158,14 @@
         android:layout_toEndOf="@+id/textView3" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/save_route_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SAVE"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:text="@string/action_save_route"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="53dp" />
 </RelativeLayout>

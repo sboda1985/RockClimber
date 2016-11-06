@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty" >
+        <item>V</item>
+        <item>V+</item>
+        <item>VI-</item>
+        <item>VI</item>
+        <item>VI+</item>
+        <item>VII-</item>
+        <item>VII</item>
+
+    </string-array>
+    <string-array name="measure" >
+    <item>UIAA</item>
+
+    </string-array>
+    <string-array name="climbing_method" >
+        <item>sport head</item>
+        <item>sport second</item>
+
+        <item>classic head</item>
+        <item>classic second</item>
+
+    </string-array>
+</resources>

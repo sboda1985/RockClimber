@@ -54,10 +54,9 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:id="@+id/editText_latitude"
             android:hint="Geo Tag"
-            android:layout_alignTop="@+id/textView_latitude"
             android:layout_toRightOf="@+id/textView_latitude"
             android:minWidth="150sp"
             android:layout_below="@+id/editText_routename"
@@ -73,14 +72,14 @@
         android:layout_below="@+id/textView_latitude"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="25dp"/>
 
         <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/editText_longitude"
         android:hint="Geo Tag"
-        android:layout_alignTop="@+id/textView_longitude"
         android:layout_toRightOf="@+id/textView_longitude"
         android:layout_below="@+id/textView_latitude"
         android:minWidth="150sp"

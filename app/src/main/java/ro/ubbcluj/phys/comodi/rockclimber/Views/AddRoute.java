@@ -1,20 +1,16 @@
 package ro.ubbcluj.phys.comodi.rockclimber.Views;
 
-import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import ro.ubbcluj.phys.comodi.rockclimber.R;
 import ro.ubbcluj.phys.comodi.rockclimber.Utils.GetLocation;
@@ -26,7 +22,7 @@ public class AddRoute extends AppCompatActivity {
     private View mLoginFormView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        mLoginFormView = findViewById(R.id.editText5);
+        mLoginFormView = findViewById(R.id.editText_note);
                 super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_route);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -34,6 +30,16 @@ public class AddRoute extends AppCompatActivity {
 
         Button saveroute_btn = (Button) findViewById((R.id.save_route_button));
         saveroute_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action" , Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
+            }
+        });
+
+        Button gpsbutton = (Button) findViewById((R.id.gpsbuton));
+        gpsbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -45,10 +51,17 @@ public class AddRoute extends AppCompatActivity {
 
                 double longitude = locate.getLongitude();
                 double latitude = locate.getLatitude();
-                Snackbar.make(view, "Replace with your own action" + longitude + " " + latitude, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                EditText ed_longitude=(EditText) findViewById(R.id.editText_longitude);
+                String stringdouble= Double.toString(longitude);
+                ed_longitude.setText(stringdouble);
+                EditText ed_latitude=(EditText) findViewById(R.id.editText_latitude);
+                stringdouble= Double.toString(latitude);
+                ed_latitude.setText(stringdouble);
+                locate.stopUsingGPS();
+
             }
         });
+
     }
 
     private boolean mayRequestGPSLocation() {

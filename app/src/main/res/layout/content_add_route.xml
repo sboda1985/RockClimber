@@ -22,54 +22,88 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name : "
-        android:id="@+id/textView"
+        android:id="@+id/textView_routename"
         android:textSize="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="25dp"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editText_routename"
         android:textSize="18dp"
         android:hint="Route name"
-        android:layout_toRightOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView_routename"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/textView"/>
+        android:layout_alignBottom="@+id/textView_routename"/>
 
-    <TextView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Latitude : "
+            android:id="@+id/textView_latitude"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView_routename"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="25dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_latitude"
+            android:hint="Geo Tag"
+            android:layout_alignTop="@+id/textView_latitude"
+            android:layout_toRightOf="@+id/textView_latitude"
+            android:minWidth="150sp"
+            android:layout_below="@+id/editText_routename"
+
+            android:layout_alignBottom="@+id/textView_latitude"/>
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location : "
-        android:id="@+id/textView2"
+        android:text="Longitude : "
+        android:id="@+id/textView_longitude"
         android:textSize="20dp"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/textView_latitude"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="15dp"/>
+        android:layout_marginBottom="25dp"/>
 
-    <EditText
+        <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/editText_longitude"
         android:hint="Geo Tag"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_below="@+id/textView4"
-        android:layout_alignRight="@+id/editText3"
-        android:layout_alignEnd="@+id/editText3"
-        android:layout_alignBottom="@+id/textView2"/>
+        android:layout_alignTop="@+id/textView_longitude"
+        android:layout_toRightOf="@+id/textView_longitude"
+        android:layout_below="@+id/textView_latitude"
+        android:minWidth="150sp"
+        android:layout_alignBottom="@+id/textView_longitude"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/gpsbuton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_menu_mylocation"
+            app:backgroundTint="#ffffff"
+            android:layout_alignTop="@+id/editText_latitude"
+            android:layout_toRightOf="@+id/editText_length"
+            android:layout_toEndOf="@+id/editText_length" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Difficulty :"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/textView2"
+        android:id="@+id/textView_diffuculty"
+        android:layout_below="@+id/textView_longitude"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="20dp"
@@ -78,22 +112,22 @@
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:layout_toRightOf="@+id/textView4"
-            android:layout_alignBottom="@+id/textView4"
-            android:layout_alignRight="@+id/editText2"
-            android:layout_alignEnd="@+id/editText2"
-            android:layout_toLeftOf="@+id/textView4"
-            android:layout_alignTop="@+id/textView4"
+            android:id="@+id/spinner_difficulty"
+            android:layout_toRightOf="@+id/textView_diffuculty"
+            android:layout_alignBottom="@+id/textView_diffuculty"
+            android:layout_alignRight="@+id/editText_longitude"
+            android:layout_alignEnd="@+id/gpsbuton"
+            android:layout_toLeftOf="@+id/textView_diffuculty"
+            android:layout_alignTop="@+id/textView_diffuculty"
             android:entries="@array/difficulty" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Length :"
-        android:id="@+id/textView5"
+        android:id="@+id/textView_length"
         android:textSize="20dp"
-        android:layout_below="@+id/textView4"
+        android:layout_below="@+id/textView_diffuculty"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="15dp"/>
@@ -103,50 +137,50 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText3"
-            android:layout_alignBottom="@+id/textView5"
-            android:layout_alignTop="@+id/textView5"
-            android:layout_toRightOf="@+id/textView5"
-            android:layout_toEndOf="@+id/textView3" />
+            android:id="@+id/editText_length"
+            android:layout_alignBottom="@+id/textView_length"
+            android:layout_alignTop="@+id/textView_length"
+            android:layout_toRightOf="@+id/textView_length"
+            android:layout_toEndOf="@+id/textView_method" />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner2"
+            android:id="@+id/spinner_lengthmeasure"
             android:entries="@array/measure"
-            android:layout_toRightOf="@+id/editText3"
-            android:layout_toEndOf="@+id/editText3"
-            android:layout_alignTop="@+id/textView5"
-            android:layout_alignBottom="@+id/textView5" />
+            android:layout_toRightOf="@+id/editText_length"
+            android:layout_toEndOf="@+id/editText_length"
+            android:layout_alignTop="@+id/textView_length"
+            android:layout_alignBottom="@+id/textView_length" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Method :"
-            android:id="@+id/textView3"
+            android:id="@+id/textView_method"
             android:textSize="20dp"
-            android:layout_below="@+id/textView5"
+            android:layout_below="@+id/textView_length"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="35dp"/>
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner3"
+            android:id="@+id/spinner_method"
             android:entries="@array/climbing_method"
-            android:layout_toRightOf="@+id/textView3"
-            android:layout_alignBottom="@+id/textView3"
-            android:layout_alignTop="@+id/textView3" />
+            android:layout_toRightOf="@+id/textView_method"
+            android:layout_alignBottom="@+id/textView_method"
+            android:layout_alignTop="@+id/textView_method" />
 
 
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Note : "
-        android:id="@+id/textView7"
+        android:id="@+id/textView_note"
 
         android:textSize="20dp"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/textView_method"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
          />
@@ -157,9 +191,9 @@
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:ems="10"
-            android:id="@+id/editText5"
+            android:id="@+id/editText_note"
 
-            android:layout_below="@id/textView7"
+            android:layout_below="@id/textView_note"
             />
         <Button
             android:id="@+id/save_route_button"
@@ -168,7 +202,7 @@
             android:layout_height="wrap_content"
             android:text="@string/action_save_route"
             android:textStyle="bold"
-            android:layout_below="@+id/editText5"
+            android:layout_below="@+id/editText_note"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="30dp" />

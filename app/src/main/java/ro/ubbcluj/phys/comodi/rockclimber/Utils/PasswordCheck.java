@@ -27,11 +27,7 @@ public class PasswordCheck {
     }
 
     public boolean CompareHashedPassword(String passwordToHash, String salt, String hashedpassword) {
-        if (get_SHA_512_SecurePassword(passwordToHash, salt).equals(hashedpassword)) {
-
-            return true;
-        }
-        return false;
+        return get_SHA_512_SecurePassword(passwordToHash, salt).equals(hashedpassword);
     }
 
     public boolean PasswordMatch(String TypedInPassword){

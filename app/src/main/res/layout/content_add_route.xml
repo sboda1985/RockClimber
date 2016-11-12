@@ -28,7 +28,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"/>
+       />
 
     <EditText
         android:layout_width="wrap_content"
@@ -41,29 +41,28 @@
         android:layout_alignParentEnd="true"
         android:layout_alignBottom="@+id/textView_routename"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Latitude : "
-            android:id="@+id/textView_latitude"
-            android:textSize="20dp"
-            android:layout_below="@+id/textView_routename"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="25dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Latitude : "
+        android:id="@+id/textView_latitude"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView_routename"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"/>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:id="@+id/editText_latitude"
-            android:hint="Geo Tag"
-            android:layout_toRightOf="@+id/textView_latitude"
-            android:minWidth="150sp"
-            android:layout_below="@+id/editText_routename"
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/editText_latitude"
+        android:hint="Geo Tag"
+        android:layout_toRightOf="@+id/textView_latitude"
+        android:minWidth="150sp"
+        android:layout_below="@+id/editText_routename"
+        android:layout_alignBottom="@+id/textView_latitude"/>
 
-            android:layout_alignBottom="@+id/textView_latitude"/>
-
-        <TextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Longitude : "
@@ -72,10 +71,9 @@
         android:layout_below="@+id/textView_latitude"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="25dp"/>
+        android:layout_marginTop="25dp" />
 
-        <EditText
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:id="@+id/editText_longitude"
@@ -86,39 +84,61 @@
         android:layout_alignBottom="@+id/textView_longitude"/>
 
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/gpsbuton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:src="@android:drawable/ic_menu_mylocation"
-            app:backgroundTint="#ffffff"
-            android:layout_alignTop="@+id/editText_latitude"
-            android:layout_toRightOf="@+id/editText_length"
-            android:layout_toEndOf="@+id/editText_length" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/gpsbuton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_menu_mylocation"
+        app:backgroundTint="#ffffff"
+        android:layout_alignTop="@+id/editText_latitude"
+        android:layout_toRightOf="@+id/editText_length"
+        android:layout_toEndOf="@+id/editText_length" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grading system : "
+        android:id="@+id/textView_gradeing"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView_longitude"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/spinner_gradeing"
+        android:layout_toRightOf="@+id/textView_gradeing"
+        android:layout_below="@+id/textView_longitude"
+        android:layout_alignRight="@id/editText_routename"
+        android:layout_alignBottom="@+id/textView_gradeing"
+        android:entries="@array/gradingsystems"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Difficulty :"
         android:id="@+id/textView_diffuculty"
-        android:layout_below="@+id/textView_longitude"
+        android:layout_below="@+id/textView_gradeing"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="20dp"
-        android:layout_marginBottom="15dp"/>
+        android:layout_marginTop="25dp"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner_difficulty"
-            android:layout_toRightOf="@+id/textView_diffuculty"
-            android:layout_alignBottom="@+id/textView_diffuculty"
-            android:layout_alignRight="@+id/editText_longitude"
-            android:layout_alignEnd="@+id/gpsbuton"
-            android:layout_toLeftOf="@+id/textView_diffuculty"
-            android:layout_alignTop="@+id/textView_diffuculty"
-            android:entries="@array/difficulty" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_difficulty"
+        android:layout_toRightOf="@+id/textView_diffuculty"
+        android:layout_alignBottom="@+id/textView_diffuculty"
+        android:layout_alignRight="@+id/editText_longitude"
+        android:layout_alignEnd="@+id/gpsbuton"
+        android:layout_toLeftOf="@+id/textView_diffuculty"
+        android:layout_alignTop="@+id/textView_diffuculty"
+        android:entries="@array/difficulty" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -129,82 +149,83 @@
         android:layout_below="@+id/textView_diffuculty"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="15dp"/>
+        android:layout_marginTop="25dp"/>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText_length"
-            android:layout_alignBottom="@+id/textView_length"
-            android:layout_alignTop="@+id/textView_length"
-            android:layout_toRightOf="@+id/textView_length"
-            android:layout_toEndOf="@+id/textView_method" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText_length"
+        android:layout_alignBottom="@+id/textView_length"
+        android:layout_alignTop="@+id/textView_length"
+        android:layout_toRightOf="@+id/textView_length"
+        android:layout_toEndOf="@+id/textView_method" />
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner_lengthmeasure"
-            android:entries="@array/measure"
-            android:layout_toRightOf="@+id/editText_length"
-            android:layout_toEndOf="@+id/editText_length"
-            android:layout_alignTop="@+id/textView_length"
-            android:layout_alignBottom="@+id/textView_length" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/spinner_lengthmeasure"
+        android:entries="@array/measure"
+        android:layout_toRightOf="@+id/editText_length"
+        android:layout_toEndOf="@+id/editText_length"
+        android:layout_alignTop="@+id/textView_length"
+        android:layout_alignBottom="@+id/textView_length" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Method :"
-            android:id="@+id/textView_method"
-            android:textSize="20dp"
-            android:layout_below="@+id/textView_length"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="35dp"/>
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner_method"
-            android:entries="@array/climbing_method"
-            android:layout_toRightOf="@+id/textView_method"
-            android:layout_alignBottom="@+id/textView_method"
-            android:layout_alignTop="@+id/textView_method" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Method :"
+        android:id="@+id/textView_method"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView_length"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_method"
+        android:entries="@array/climbing_method"
+        android:layout_toRightOf="@+id/textView_method"
+        android:layout_alignBottom="@+id/textView_method"
+        android:layout_alignTop="@+id/textView_method" />
 
 
-        <TextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Note : "
         android:id="@+id/textView_note"
-
         android:textSize="20dp"
         android:layout_below="@+id/textView_method"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
          />
 
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/editText_note"
-
-            android:layout_below="@id/textView_note"
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText_note"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/textView_note"
             />
-        <Button
-            android:id="@+id/save_route_button"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/action_save_route"
-            android:textStyle="bold"
-            android:layout_below="@+id/editText_note"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp" />
+
+    <Button
+        android:id="@+id/save_route_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/action_save_route"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText_note"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp" />
 
     </RelativeLayout>
 </ScrollView>

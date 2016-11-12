@@ -12,7 +12,8 @@
     </string-array>
     <string-array name="measure" >
         <item>m</item>
-        <item>feat</item>
+        <item>ft</item>
+
 
     </string-array>
     <string-array name="climbing_method" >
@@ -22,5 +23,17 @@
         <item>classic head</item>
         <item>classic second</item>
 
+    </string-array>
+
+    <string-array name="gradingsystems" >
+        <item>UIAA</item>
+        <item>YDS</item>
+        <item>French</item>
+        <item>British - Tech</item>
+        <item>British - Adj</item>
+        <item>Saxon</item>
+        <item>Ewbank</item>
+        <item>Nordic</item>
+        <item>Brazil</item>
     </string-array>
 </resources>

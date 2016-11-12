@@ -8,8 +8,9 @@ It would be a simple app, which should satisfy the following requirements:
 - the user should be able to log in 
 - the user should be able to log/save climbed routes with the geo tag of this route with the following properties
 	- route name
-	- latitude, longitude
-	- grading system to be used (fixed list)
+	- latitude
+	- longitude
+	- grading system to be used (UIAA, )
 	- difficulty 
 	- length of the route 
 	- climbing method (classic head, sport second, etc)
@@ -28,5 +29,5 @@ Later:
 
 
 Current status:
-//TODO
+Login, register, overview and addroute views made, still need to add the functionality behind
 

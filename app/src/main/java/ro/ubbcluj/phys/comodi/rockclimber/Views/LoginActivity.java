@@ -323,6 +323,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                //if the login was successful, go to the Overview class
                 startActivity(new Intent(LoginActivity.this, OverView.class));
               //  finish();
             } else {

@@ -157,12 +157,16 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         String password = mPasswordView.getText().toString();
         String confirmpassword = mConfirmPasswordView.getText().toString();
 
-        if (!password.equals(confirmpassword)){
-            return;
-        }
-
         boolean cancel = false;
         View focusView = null;
+
+        if (!password.equals(confirmpassword)){
+            mConfirmPasswordView.setError(getString(R.string.error_password_not_match));
+            focusView = mConfirmPasswordView;
+            cancel = true;
+        }
+
+
 
         // Check for a valid password, if the user entered one.
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {

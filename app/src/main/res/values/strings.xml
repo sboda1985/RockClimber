@@ -19,4 +19,5 @@
     <string name="title_activity_add_route">AddRoute</string>
     <string name="title_activity_over_view">OverView</string>
     <string name="title_activity_register">Register</string>
+    <string name="error_password_not_match">Entered passwords do not match</string>
 </resources>

@@ -10,11 +10,15 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import ro.ubbcluj.phys.comodi.rockclimber.R;
 import ro.ubbcluj.phys.comodi.rockclimber.Utils.GetLocation;
+import ro.ubbcluj.phys.comodi.rockclimber.Utils.GradeValues;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -33,11 +37,35 @@ public class AddRoute extends AppCompatActivity {
         saveroute_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action" , Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                if(required_fields_completed()) {
+                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
 
             }
+
+
         });
+
+        final Spinner gradesystem_spinner = (Spinner)  findViewById((R.id.spinner_gradeing));
+        final Spinner difficulty_spinner = (Spinner)  findViewById((R.id.spinner_difficulty));
+        gradesystem_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+                                                          public void onItemSelected(AdapterView<?> parent, View view, int position,       long id) {
+                                                              String selected_grade = gradesystem_spinner.getSelectedItem().toString();
+                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  android.R.layout.simple_list_item_1, new GradeValues().returngrades(selected_grade));
+                                                              difficulty_spinner.setAdapter(newAdapter);
+
+                                                          }
+
+                                                          @Override
+                                                          public void onNothingSelected(AdapterView<?> parent) {
+                                                              String selected_grade = "UIAA";
+                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  android.R.layout.simple_list_item_1, new GradeValues().returngrades(selected_grade));
+                                                              difficulty_spinner.setAdapter(newAdapter);
+                                                          }
+                                                      });
+
 
         FloatingActionButton gpsbutton = (FloatingActionButton) findViewById((R.id.gpsbuton));
         gpsbutton.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +93,9 @@ public class AddRoute extends AppCompatActivity {
 
     }
 
+    private boolean required_fields_completed(){
+        return true;
+    }
     private boolean mayRequestGPSLocation() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;

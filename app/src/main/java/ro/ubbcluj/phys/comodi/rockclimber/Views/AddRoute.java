@@ -2,13 +2,17 @@ package ro.ubbcluj.phys.comodi.rockclimber.Views;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -25,6 +29,9 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 public class AddRoute extends AppCompatActivity {
     private View mLoginFormView;
+    private AddRouteTask mRouteTask = null;
+    private EditText groutename;
+    private Spinner gdifficulty;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mLoginFormView = findViewById(R.id.editText_note);
@@ -32,16 +39,16 @@ public class AddRoute extends AppCompatActivity {
         setContentView(R.layout.activity_add_route);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        groutename = (EditText) findViewById(R.id.editText_routename);
         Button saveroute_btn = (Button) findViewById((R.id.save_route_button));
         saveroute_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(required_fields_completed()) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
+                attemptSave();
+//                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                            .setAction("Action", null).show();
+
 
             }
 
@@ -63,6 +70,7 @@ public class AddRoute extends AppCompatActivity {
                                                               String selected_grade = "UIAA";
                                                               ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  android.R.layout.simple_list_item_1, new GradeValues().returngrades(selected_grade));
                                                               difficulty_spinner.setAdapter(newAdapter);
+
                                                           }
                                                       });
 
@@ -77,7 +85,7 @@ public class AddRoute extends AppCompatActivity {
                 }
                 Context context = getApplicationContext();
                 GetLocation locate = new GetLocation(context);
-
+                locate.updateGPSCoordinates();
                 double longitude = locate.getLongitude();
                 double latitude = locate.getLatitude();
                 EditText ed_longitude=(EditText) findViewById(R.id.editText_longitude);
@@ -93,9 +101,7 @@ public class AddRoute extends AppCompatActivity {
 
     }
 
-    private boolean required_fields_completed(){
-        return true;
-    }
+
     private boolean mayRequestGPSLocation() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
@@ -145,6 +151,92 @@ public class AddRoute extends AppCompatActivity {
 
         }
         return false;
+    }
+
+    /**
+     * Attempts to sign in or register the account specified by the login form.
+     * If there are form errors (invalid email, missing fields, etc.), the
+     * errors are presented and no actual login attempt is made.
+     */
+    private void attemptSave() {
+        if (mRouteTask != null) {
+            return;
+        }
+
+        // Reset errors.
+        groutename.setError(null);
+
+        // Store values at the time of the login attempt.
+        String route_name = groutename.getText().toString();
+
+        boolean cancel = false;
+        View focusView = null;
+
+        // Check for a valid password, if the user entered one.
+        if (TextUtils.isEmpty(route_name) ) {
+            groutename.setError(getString(R.string.error_field_required));
+            focusView = groutename;
+            cancel = true;
+        }
+    //TODO do the same for the remaining required items, exact list to be submitted in Mantis
+
+        if (cancel) {
+            // There was an error; don't attempt login and focus the first
+            // form field with an error.
+            focusView.requestFocus();
+        } else {
+            // Show a progress spinner, and kick off a background task to
+            // perform the user login attempt.
+            Log.e(null, "asd");
+            mRouteTask = new AddRouteTask(route_name, "asd");
+            mRouteTask.execute((Void) null);
+        }
+    }
+    /**
+     * Represents an asynchronous add route task to save the entered route into the database
+     *
+     */
+    public class AddRouteTask extends AsyncTask<Void, Void, Boolean> {
+
+        private final String Routename;
+        private final String gradename;
+
+        AddRouteTask(String route, String grade) {
+            Routename = route;
+            gradename = grade;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+
+            return  checkrequiredfields();
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success) {
+            mRouteTask = null;
+
+
+            if (success) {
+                //if the login was successful, go to the Overview class
+                Log.d(null, "save successfull");
+                startActivity(new Intent(AddRoute.this, OverView.class));
+                //  finish();
+//            } else {
+//                groutename.setError(getString(R.string.error_field_required));
+//                groutename.requestFocus();
+//            }
+            }
+        }
+
+        protected boolean checkrequiredfields(){
+            return true;
+        }
+        @Override
+        protected void onCancelled() {
+            mRouteTask = null;
+           ;
+        }
     }
 
 }

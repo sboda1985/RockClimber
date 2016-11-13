@@ -156,9 +156,9 @@
         android:layout_height="40dp"
         android:inputType="number"
         android:ems="10"
+        android:hint="Overall height"
         android:id="@+id/editText_length"
         android:layout_alignBottom="@+id/textView_length"
-        android:layout_alignTop="@+id/textView_length"
         android:layout_toRightOf="@+id/textView_length"
         android:layout_toEndOf="@+id/textView_method" />
 

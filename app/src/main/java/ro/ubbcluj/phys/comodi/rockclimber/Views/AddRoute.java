@@ -83,17 +83,20 @@ public class AddRoute extends AppCompatActivity {
                 if (!mayRequestGPSLocation() && !mayRequestNetworkLocation()) {
                     return;
                 }
+
                 Context context = getApplicationContext();
                 GetLocation locate = new GetLocation(context);
                 locate.updateGPSCoordinates();
                 double longitude = locate.getLongitude();
                 double latitude = locate.getLatitude();
+
                 EditText ed_longitude=(EditText) findViewById(R.id.editText_longitude);
                 String stringdouble= Double.toString(longitude);
                 ed_longitude.setText(stringdouble);
                 EditText ed_latitude=(EditText) findViewById(R.id.editText_latitude);
                 stringdouble= Double.toString(latitude);
                 ed_latitude.setText(stringdouble);
+
                 locate.stopUsingGPS();
 
             }

@@ -31,3 +31,5 @@ Later:
 Current status:
 Login, register, overview and addroute views made, still need to add the functionality behind
 
+Logo by Martwin Design https://www.pinterest.com/graf_atti/
+

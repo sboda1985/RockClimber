@@ -20,6 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,10 +32,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import ro.ubbcluj.phys.comodi.rockclimber.R;
+import ro.ubbcluj.phys.comodi.rockclimber.Utils.PasswordCheck;
 
+import static android.Manifest.permission.INTERNET;
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
@@ -46,8 +50,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
+    private static final int REQUEST_INTERNET = 1;
+    private static final String TAG = LoginActivity.class.getSimpleName();
 
-
+    private static String errorTag = "";
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -100,9 +106,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     private void populateAutoComplete() {
-        if (!mayRequestContacts()) {
+        if (!mayRequestContacts() || !mayRequestInternet()) {
             return;
         }
+
 
         getLoaderManager().initLoader(0, null, this);
     }
@@ -125,6 +132,29 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     });
         } else {
             requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
+        }
+        return false;
+    }
+
+
+    private boolean mayRequestInternet() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return true;
+        }
+        if (checkSelfPermission(INTERNET) == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        }
+        if (shouldShowRequestPermissionRationale(INTERNET)) {
+            Snackbar.make(mEmailView, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
+                    .setAction(android.R.string.ok, new View.OnClickListener() {
+                        @Override
+                        @TargetApi(Build.VERSION_CODES.M)
+                        public void onClick(View v) {
+                            requestPermissions(new String[]{INTERNET}, REQUEST_INTERNET);
+                        }
+                    });
+        } else {
+            requestPermissions(new String[]{INTERNET}, REQUEST_INTERNET);
         }
         return false;
     }
@@ -328,13 +358,25 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 startActivity(new Intent(LoginActivity.this, OverView.class));
               //  finish();
             } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
+               // mPasswordView.setError(getString(R.string.error_incorrect_password));
+                mPasswordView.setError(errorTag);
                 mPasswordView.requestFocus();
             }
         }
 
         protected boolean checkpassword(){
-            return true;
+            PasswordCheck pw = new PasswordCheck(getApplicationContext());
+            HashMap hm = new HashMap();
+            hm.put("email", mEmail);
+            hm.put("password", mPassword);
+            String url = "http://comodi.phys.ubbcluj.ro:8000/checklogin/";
+            String match = pw.performPostCall(url, hm);
+            if (match.contains("true")){
+                return true;
+            } else {
+                return false;
+            }
+
         }
         @Override
         protected void onCancelled() {

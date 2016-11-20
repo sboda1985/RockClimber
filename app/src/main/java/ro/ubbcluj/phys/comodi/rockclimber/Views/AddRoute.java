@@ -60,7 +60,7 @@ public class AddRoute extends AppCompatActivity {
         gradesystem_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
                                                           public void onItemSelected(AdapterView<?> parent, View view, int position,       long id) {
                                                               String selected_grade = gradesystem_spinner.getSelectedItem().toString();
-                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  android.R.layout.simple_list_item_1, new GradeValues().returngrades(selected_grade));
+                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  R.layout.spinner_properties, new GradeValues().returngrades(selected_grade));
                                                               difficulty_spinner.setAdapter(newAdapter);
 
                                                           }
@@ -68,7 +68,8 @@ public class AddRoute extends AppCompatActivity {
                                                           @Override
                                                           public void onNothingSelected(AdapterView<?> parent) {
                                                               String selected_grade = "UIAA";
-                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  android.R.layout.simple_list_item_1, new GradeValues().returngrades(selected_grade));
+                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  R.layout.spinner_properties, new GradeValues().returngrades(selected_grade));
+
                                                               difficulty_spinner.setAdapter(newAdapter);
 
                                                           }

@@ -20,7 +20,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -36,7 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import ro.ubbcluj.phys.comodi.rockclimber.R;
-import ro.ubbcluj.phys.comodi.rockclimber.Utils.PasswordCheck;
+import ro.ubbcluj.phys.comodi.rockclimber.Utils.ServerConnect;
 
 import static android.Manifest.permission.INTERNET;
 import static android.Manifest.permission.READ_CONTACTS;
@@ -365,7 +364,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         protected boolean checkpassword(){
-            PasswordCheck pw = new PasswordCheck(getApplicationContext());
+            ServerConnect pw = new ServerConnect(getApplicationContext());
             HashMap hm = new HashMap();
             hm.put("email", mEmail);
             hm.put("password", mPassword);

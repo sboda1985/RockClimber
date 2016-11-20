@@ -26,7 +26,7 @@ import javax.net.ssl.HttpsURLConnection;
  * Created by sboda on 11/8/16.
  */
 
-public class PasswordCheck extends
+public class ServerConnect extends
         AsyncTask<Void, Void, Boolean> {
         private final String USER_AGENT = "Mozilla/5.0";
 
@@ -37,7 +37,7 @@ public class PasswordCheck extends
 
 
 
-        public PasswordCheck(Context contex) {
+        public ServerConnect(Context contex) {
 
             this.context = contex;
 
@@ -45,7 +45,7 @@ public class PasswordCheck extends
 
         @Override
         protected void onPreExecute() {
-            Log.e(TAG, "1 - RequestVoteTask is about to start...");
+
 
         }
 
@@ -54,7 +54,7 @@ public class PasswordCheck extends
             boolean status = false;
 
             String response = "";
-            Log.e(TAG, "2 - pre Request to response...");
+
 
             try {
                 response = performPostCall(urlString, new HashMap<String, String>() {
@@ -66,24 +66,23 @@ public class PasswordCheck extends
                         put("Content-Type", "application/json");
                     }
                 });
-                Log.e(TAG, "3 - give Response...");
-                Log.e(TAG, "4 " + response.toString());
+
             } catch (Exception e) {
                 // displayLoding(false);
 
-                Log.e(TAG, "Error ...");
+
             }
-            Log.e(TAG, "5 - after Response...");
+
 
             if (!response.equalsIgnoreCase("")) {
                 try {
-                    Log.e(TAG, "6 - response !empty...");
+
                     //
                     JSONObject jRoot = new JSONObject(response);
                     JSONObject d = jRoot.getJSONObject("d");
 
                     int ResultType = d.getInt("ResultType");
-                    Log.e("ResultType", ResultType + "");
+
 
                     if (ResultType == 1) {
 
@@ -99,7 +98,7 @@ public class PasswordCheck extends
 
                 }
             } else {
-                Log.e(TAG, "6 - response is empty...");
+
 
                 status = false;
             }
@@ -110,21 +109,24 @@ public class PasswordCheck extends
         @Override
         protected void onPostExecute(Boolean result) {
             //
-            Log.e(TAG, "7 - onPostExecute ...");
+
 
             if (result) {
                 Log.e(TAG, "8 - Update UI ...");
-
-                // setUpdateUI(adv);
             } else {
                 Log.e(TAG, "8 - Finish ...");
 
-                // displayLoding(false);
-                // finish();
             }
 
         }
 
+    /**
+     * the function which does the post and returns the JSonobject
+     *
+     * @param requestURL
+     * @param postDataParams
+     * @return - server response to the post
+     */
         public String performPostCall(String requestURL,
                                       HashMap<String, String> postDataParams) {
 
@@ -133,57 +135,34 @@ public class PasswordCheck extends
             try {
                 url = new URL(requestURL);
 
+                //creating the post parameters from the passed hashmap
                 String postData = "";
                 for (Map.Entry<String,String> param : postDataParams.entrySet()) {
                     if (postData.length() != 0) postData+=("&");
-//                    postData.append(URLEncoder.encode(, "UTF-8"));
-//                    postData.append('=');
-//                    postData.append(URLEncoder.encode(String.valueOf(), "UTF-8"));
-
-
                         postData+=(URLEncoder.encode(param.getKey(),"utf-8")+"="+URLEncoder.encode(param.getValue(),"utf-8"));
-                        Log.e(TAG, URLEncoder.encode(param.getKey(),"utf-8")+"="+URLEncoder.encode(param.getValue(),"utf-8"));
 
                 }
-                Log.e(TAG, "11 - url :  " +postData);
+
+                //open connection to the server
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000);
                 conn.setConnectTimeout(15000);
+                //specifying that this will be a post method
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("User-Agent", USER_AGENT);
                 conn.setRequestProperty("Accept-Language", "UTF-8");
                 conn.setDoOutput(true);
                 conn.setDoInput(true);
-                //conn.getOutputStream().write(postDataBytes);
-
+                //parsing the POST parameters
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(conn.getOutputStream());
                 outputStreamWriter.write(postData);
                 outputStreamWriter.flush();
-                Log.e(TAG, "11 - url : " + requestURL + " " +postData);
 
-            /*
-             * JSON
-             */
-
-
-                //
-//                String token = Static.getPrefsToken(context);
-//
-//                root.put("securityInfo", getSecurityInfo(context));
-//                root.put("advertisementId", 11);
-
-//                String str = root.toString();
-//                byte[] outputBytes = str.getBytes("UTF-8");
-//                OutputStream os = conn.getOutputStream();
-//                os.write(outputBytes);
-               // Log.e(TAG, "12 - fullurl  : " + str + " - " + os);
+                //get the response code, useful for later debugging, if something does not go well
                 int responseCode = conn.getResponseCode();
 
-                Log.e(TAG, "13 - responseCode : " + responseCode);
-
                 if (responseCode == HttpsURLConnection.HTTP_OK) {
-                    Log.e(TAG, "14 - HTTP_OK");
-
+                    //get the response and return it
                     String line;
                     BufferedReader br = new BufferedReader(new InputStreamReader(
                             conn.getInputStream()));
@@ -191,7 +170,7 @@ public class PasswordCheck extends
                         response += line;
                     }
                 } else {
-                    Log.e(TAG, "14 - False - HTTP_OK");
+                    //something was not right, return an empty response
                     response = "";
                 }
             } catch (Exception e) {

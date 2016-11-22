@@ -31,9 +31,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import ro.ubbcluj.phys.comodi.rockclimber.R;
+import ro.ubbcluj.phys.comodi.rockclimber.Utils.ServerConnect;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -307,16 +309,17 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
 
         private final String mEmail;
         private final String mPassword;
-
+        private  String mRegerror;
         UserLoginTask(String email, String password) {
             mEmail = email;
             mPassword = password;
+            mRegerror=null;
         }
 
         @Override
         protected Boolean doInBackground(Void... params) {
-           register();
-            return true;
+            return register();
+
         }
 
         @Override
@@ -328,12 +331,22 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                 //if the registration was successful, go to the Overview class
                 startActivity(new Intent(RegisterActivity.this, OverView.class));
             } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
+                mPasswordView.setError(mRegerror);
                 mPasswordView.requestFocus();
             }
         }
-        protected void register(){
-
+        protected boolean register(){
+            ServerConnect pw = new ServerConnect(getApplicationContext());
+            HashMap hm = new HashMap();
+            hm.put("email", mEmail);
+            hm.put("password", mPassword);
+            String url = "http://comodi.phys.ubbcluj.ro:8000/registration/";
+            String match = pw.performPostCall(url, hm);
+            if(match.contains("success")){return true;}
+            else {
+                mRegerror=match;
+                return false;
+            }
         }
 
         @Override

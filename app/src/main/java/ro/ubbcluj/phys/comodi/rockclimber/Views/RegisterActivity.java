@@ -331,7 +331,13 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                 //if the registration was successful, go to the Overview class
                 startActivity(new Intent(RegisterActivity.this, OverView.class));
             } else {
-                mPasswordView.setError(mRegerror);
+                if(mRegerror.contains("taken")){
+                    mEmailView.setError("emaail already taken");
+                }
+                if(mRegerror.contains("problem")){
+                    mEmailView.setError("registration unsuccesful");
+                }
+
                 mPasswordView.requestFocus();
             }
         }
@@ -344,7 +350,13 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             String match = pw.performPostCall(url, hm);
             if(match.contains("success")){return true;}
             else {
-                mRegerror=match;
+                if(match.contains("taken")){
+                    mRegerror="email already taken";
+                }
+                if(match.contains("unsuccesful")){
+                    mRegerror="there was a problem registering";
+                }
+
                 return false;
             }
         }

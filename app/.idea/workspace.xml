@@ -117,7 +117,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="858">
               <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
               <folding>
                 <element signature="e#884#902#0" expanded="true" />
@@ -133,8 +133,8 @@
       <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/ubbcluj/phys/comodi/rockclimber/Views/RegisterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="347" column="29" selection-start-line="347" selection-start-column="29" selection-end-line="347" selection-end-column="29" />
+            <state relative-caret-position="380">
+              <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -1066,8 +1066,8 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/spinner_properties.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/ubbcluj/phys/comodi/rockclimber/Views/RegisterActivity.java" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/ubbcluj/phys/comodi/rockclimber/Views/RegisterActivity.java" />
       </list>
     </option>
   </component>
@@ -1904,7 +1904,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="858">
           <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
           <folding>
             <element signature="e#884#902#0" expanded="true" />
@@ -1918,8 +1918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/ubbcluj/phys/comodi/rockclimber/Views/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="347" column="29" selection-start-line="347" selection-start-column="29" selection-end-line="347" selection-end-column="29" />
+        <state relative-caret-position="380">
+          <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
           <folding />
         </state>
       </provider>

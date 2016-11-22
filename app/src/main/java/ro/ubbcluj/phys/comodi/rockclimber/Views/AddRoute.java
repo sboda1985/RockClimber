@@ -176,7 +176,7 @@ public class AddRoute extends AppCompatActivity {
         boolean cancel = false;
         View focusView = null;
 
-        // Check for a valid password, if the user entered one.
+        // Check for a valid route name, if the user entered one.
         if (TextUtils.isEmpty(route_name) ) {
             groutename.setError(getString(R.string.error_field_required));
             focusView = groutename;
@@ -213,7 +213,7 @@ public class AddRoute extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... params) {
 
-            return  checkrequiredfields();
+            return true;
         }
 
         @Override
@@ -233,9 +233,7 @@ public class AddRoute extends AppCompatActivity {
             }
         }
 
-        protected boolean checkrequiredfields(){
-            return true;
-        }
+
         @Override
         protected void onCancelled() {
             mRouteTask = null;

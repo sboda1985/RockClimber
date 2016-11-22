@@ -56,7 +56,7 @@ captures/
 *.iml
 .idea/workspace.xml
 .idea/tasks.xml
-.idea/libraries
+.idea/libraries/
 
 # Keystore files
 *.jks

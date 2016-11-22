@@ -21,9 +21,34 @@ public class GradeValues {
 
     public ArrayList<String> returngrades(String grading_system) {
         ArrayList<String> stringList = new ArrayList<String>();
-        if (grading_system.equals("UIAA")) {
+        if (grading_system.contains("UIAA")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_UIAA));
         }
+        if (grading_system.contains("YDS")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_YDS));
+        }
+        if (grading_system.contains("British_Tech")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_British_Tech));
+        }
+        if (grading_system.contains("British_Adj")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_British_Adj));
+        }if (grading_system.contains("French")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_French));
+        }if (grading_system.contains("Saxon")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_Saxon));
+        }if (grading_system.contains("Ewbank")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_Ewbank));
+        }if (grading_system.contains("Nordic")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_Nordic));
+        }
+        if (grading_system.contains("Brazil")) {
+            stringList = new ArrayList<String>(Arrays.asList(grade_Brazil));
+        }
+
+
+
+
+
         //TODO implement for the remaining gradeing system the proper return
         return stringList;
 

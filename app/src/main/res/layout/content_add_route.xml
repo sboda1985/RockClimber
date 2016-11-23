@@ -84,18 +84,7 @@
         android:layout_alignBottom="@+id/textView_longitude"/>
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/gpsbuton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:src="@android:drawable/ic_menu_mylocation"
-        app:backgroundTint="#ffffff"
-        android:layout_alignTop="@+id/editText_latitude"
-        android:layout_toRightOf="@+id/editText_length"
-        android:layout_toEndOf="@+id/editText_length" />
-
-    <TextView
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Grading system : "
@@ -110,11 +99,12 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:id="@+id/spinner_gradeing"
-        android:layout_toRightOf="@+id/textView_gradeing"
-        android:layout_below="@+id/textView_longitude"
         android:layout_alignRight="@id/editText_routename"
         android:layout_alignBottom="@+id/textView_gradeing"
-        android:entries="@array/gradingsystems"/>
+        android:entries="@array/gradingsystems"
+        android:layout_alignTop="@+id/textView_gradeing"
+        android:layout_toRightOf="@+id/textView_gradeing"
+        android:layout_toEndOf="@+id/textView_gradeing" />
 
 
     <TextView
@@ -162,17 +152,7 @@
         android:layout_toRightOf="@+id/textView_length"
         android:layout_toEndOf="@+id/textView_method" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:id="@+id/spinner_lengthmeasure"
-        android:entries="@array/measure"
-        android:layout_toRightOf="@+id/editText_length"
-        android:layout_toEndOf="@+id/editText_length"
-        android:layout_alignTop="@+id/textView_length"
-        android:layout_alignBottom="@+id/textView_length" />
-
-    <TextView
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Method :"
@@ -226,6 +206,26 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="30dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/spinner_lengthmeasure"
+            android:entries="@array/measure"
+            android:layout_alignBottom="@+id/editText_length"
+            android:layout_toRightOf="@+id/editText_longitude"
+            android:layout_toEndOf="@+id/editText_longitude" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/gpsbuton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_menu_mylocation"
+            app:backgroundTint="#ffffff"
+            android:layout_alignTop="@+id/textView_note"
+            android:layout_alignRight="@+id/spinner_lengthmeasure"
+            android:layout_alignEnd="@+id/spinner_lengthmeasure" />
 
     </RelativeLayout>
 </ScrollView>

@@ -112,7 +112,8 @@ public class ServerConnect extends
 
 
             if (result) {
-                Log.e(TAG, "8 - Update UI ...");
+                Log.e(TAG, "8 - Update UI ..."
+);
             } else {
                 Log.e(TAG, "8 - Finish ...");
 

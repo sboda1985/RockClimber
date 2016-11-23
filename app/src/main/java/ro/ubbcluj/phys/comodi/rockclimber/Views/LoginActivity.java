@@ -358,7 +358,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
               //  finish();
             } else {
                // mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.setError(errorTag);
+                mPasswordView.setError("The password is incorect !");
                 mPasswordView.requestFocus();
             }
         }

@@ -223,9 +223,10 @@
             android:layout_gravity="bottom|end"
             android:src="@android:drawable/ic_menu_mylocation"
             app:backgroundTint="#ffffff"
-            android:layout_alignTop="@+id/textView_note"
+            android:layout_below="@+id/spinner_method"
             android:layout_alignRight="@+id/spinner_lengthmeasure"
-            android:layout_alignEnd="@+id/spinner_lengthmeasure" />
+            android:layout_alignEnd="@+id/spinner_lengthmeasure"
+            android:layout_marginTop="14dp" />
 
     </RelativeLayout>
 </ScrollView>

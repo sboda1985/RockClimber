@@ -81,6 +81,12 @@
                 android:text="@string/action_register"
                 android:textStyle="bold" />
 
+            <TextView
+                android:text="                               Forgot your password ?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/forgotpassword" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

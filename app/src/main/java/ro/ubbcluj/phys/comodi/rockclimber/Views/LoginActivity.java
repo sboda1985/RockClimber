@@ -63,12 +63,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private TextView mForgotEmailTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
+        mForgotEmailTextView= (TextView) findViewById(R.id.forgotpassword);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
@@ -82,7 +84,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 }
                 return false;
             }
-        });
+        }
+                mForgotEmailTextView.setOnClickListener(new View.OnClickListener(){
+                    public void onClick(View v){
+                        Intent intent = new Intent(this, ForgotPasswordActivity.class);
+                        startActivity(intent);
+                    }
+                });
+        );
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {

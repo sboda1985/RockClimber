@@ -76,22 +76,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
-            }
-        }
+                                                    @Override
+                                                    public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
+                                                        if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                                                            attemptLogin();
+                                                            return true;
+                                                        }
+                                                        return false;
+                                                    }
+                                                });
                 mForgotEmailTextView.setOnClickListener(new View.OnClickListener(){
                     public void onClick(View v){
-                        Intent intent = new Intent(this, ForgotPasswordActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
                     }
-                });
-        );
+                }
+                );
+
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {

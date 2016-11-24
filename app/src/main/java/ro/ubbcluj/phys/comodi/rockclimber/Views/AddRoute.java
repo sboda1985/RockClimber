@@ -32,6 +32,8 @@ public class AddRoute extends AppCompatActivity {
     private AddRouteTask mRouteTask = null;
     private EditText groutename;
     private Spinner gdifficulty;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mLoginFormView = findViewById(R.id.editText_note);

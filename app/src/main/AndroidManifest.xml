@@ -13,24 +13,24 @@
 
     <application
         android:allowBackup="true"
+        android:exported="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:exported="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".Views.LoginActivity"
-            android:label="@string/app_name" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Views.AddRoute"
-            android:label="@string/title_activity_add_route"
             android:exported="true"
+            android:label="@string/title_activity_add_route"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Views.OverView"
@@ -38,9 +38,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Views.RegisterActivity"
-            android:label="@string/title_activity_register">
-
-        </activity>
+            android:label="@string/title_activity_register"></activity>
+        <activity android:name=".Views.ForgotPasswordActivity"></activity>
     </application>
 
 </manifest>

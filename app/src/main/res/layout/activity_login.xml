@@ -11,6 +11,7 @@
     tools:context=".Views.LoginActivity"
     android:background="@drawable/login1background">
 
+
     <!-- Login progress -->
     <ProgressBar
         android:id="@+id/login_progress"

@@ -124,7 +124,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             HashMap hm = new HashMap();
             hm.put("email", mEmail);
 
-            String url = "http://comodi.phys.ubbcluj.ro:8000/checklogin/";
+            String url = "http://comodi.phys.ubbcluj.ro:8000/forgotpassword/";
             String match = pw.performPostCall(url, hm);
             if (match.contains("true")){
                 return true;

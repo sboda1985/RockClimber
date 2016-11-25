@@ -8,6 +8,7 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
@@ -31,6 +32,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         f_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                Log.d(null, "Email sent...");
                 //TODO write method to send an email containing a secret code
                 attemptForgotPassword();
             }

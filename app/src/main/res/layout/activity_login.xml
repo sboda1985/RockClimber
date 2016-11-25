@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Views.LoginActivity">
+    tools:context=".Views.LoginActivity"
+    android:background="@drawable/login1background">
 
     <!-- Login progress -->
     <ProgressBar
@@ -17,7 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+/>
 
     <ScrollView
         android:id="@+id/login_form"
@@ -82,10 +84,15 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:text="                               Forgot your password ?"
+                android:text="            Forgot your password ?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/forgotpassword" />
+                android:id="@+id/forgotpassword"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:textColor="?attr/colorButtonNormal" />
+
+
 
         </LinearLayout>
     </ScrollView>

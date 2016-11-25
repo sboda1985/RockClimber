@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -141,17 +142,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:inputType="number"
-        android:ems="10"
-        android:hint="Overall height"
-        android:id="@+id/editText_length"
-        android:layout_alignBottom="@+id/textView_length"
-        android:layout_toRightOf="@+id/textView_length"
-        android:layout_toEndOf="@+id/textView_method" />
-
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -227,6 +217,18 @@
             android:layout_alignRight="@+id/spinner_lengthmeasure"
             android:layout_alignEnd="@+id/spinner_lengthmeasure"
             android:layout_marginTop="14dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:inputType="number"
+            android:ems="10"
+            android:hint="Overall height"
+            android:id="@+id/editText_length"
+            android:layout_above="@+id/textView_method"
+            android:layout_toRightOf="@+id/textView_method"
+            android:layout_alignRight="@+id/editText_latitude"
+            android:layout_alignEnd="@+id/editText_latitude" />
 
     </RelativeLayout>
 </ScrollView>

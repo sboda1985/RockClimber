@@ -27,10 +27,10 @@ public class GradeValues {
         if (grading_system.contains("YDS")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_YDS));
         }
-        if (grading_system.contains("British_Tech")) {
+        if (grading_system.contains("British - Tech")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_British_Tech));
         }
-        if (grading_system.contains("British_Adj")) {
+        if (grading_system.contains("British - Adj")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_British_Adj));
         }if (grading_system.contains("French")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_French));

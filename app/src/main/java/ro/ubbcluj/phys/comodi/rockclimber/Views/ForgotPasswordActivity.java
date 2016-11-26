@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 
 import ro.ubbcluj.phys.comodi.rockclimber.R;
@@ -20,7 +23,8 @@ import ro.ubbcluj.phys.comodi.rockclimber.Utils.ServerConnect;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
     private EditText f_email;
-    private Button f_button;
+
+    private String  userID;
     private ForgotPasswordTask mAuthTask = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +32,16 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password);
 
         f_email =(EditText) findViewById(R.id.f_p_email);
-        f_button =(Button) findViewById(R.id.f_p_ok);
+        android.widget.Button f_button =(Button) findViewById(R.id.f_p_ok);
 
-        f_button.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Log.d(null, "Email sent...");
-                //TODO write method to send an email containing a secret code
+        f_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.e("asd", "button pushed");
                 attemptForgotPassword();
             }
         });
+
 
 
 
@@ -51,19 +56,15 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         if (mAuthTask != null) {
             return;
         }
-
+    Log.d("attemptforgotpass","ok authtask");
         // Reset errors.
         f_email.setError(null);
 
 
         // Store values at the time of the login attempt.
         String email =f_email.getText().toString();
-       // String password = mPasswordView.getText().toString();
-
-        boolean cancel = false;
+       boolean cancel = false;
         View focusView = null;
-
-
 
 
         // Check for a valid email address.
@@ -85,6 +86,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
            // showProgress(true);
+            Log.d("asd","attempt to start reset");
             mAuthTask = new ForgotPasswordActivity.ForgotPasswordTask(email);
             mAuthTask.execute((Void) null);
         }
@@ -101,8 +103,9 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Void... params) {
-
-            return  checkemail();
+            boolean value = checkemail();
+            Log.d("doinback", String.valueOf(value));
+            return  value;
         }
 
         @Override
@@ -111,13 +114,10 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             //showProgress(false);
 
             if (success) {
-                //if the login was successful, go to the Overview class
-                //startActivity(new Intent(, OverView.class));
-                //  finish();
-            } else {
-
-
-
+                        Intent myIntent =new Intent(ForgotPasswordActivity.this, ResetPasswordWithPin.class);
+                        myIntent.putExtra("id",userID);
+                        Log.e("asd", "start next intent");
+                        startActivity(myIntent);
             }
         }
 
@@ -125,10 +125,16 @@ public class ForgotPasswordActivity extends AppCompatActivity {
             ServerConnect pw = new ServerConnect(getApplicationContext());
             HashMap hm = new HashMap();
             hm.put("email", mEmail);
-
             String url = "http://comodi.phys.ubbcluj.ro:8000/forgotpassword/";
             String match = pw.performPostCall(url, hm);
-            if (match.contains("true")){
+            Log.e("asd", match);
+            if (match.contains("email sent")){
+                try {
+                JSONObject json = new JSONObject(match);
+                    userID=json.getString("id");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 return true;
             } else {
                 return false;

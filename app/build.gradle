@@ -20,6 +20,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "ro.ubbcluj.phys.comodi.rockclimber"
         minSdkVersion 15
         targetSdkVersion 23

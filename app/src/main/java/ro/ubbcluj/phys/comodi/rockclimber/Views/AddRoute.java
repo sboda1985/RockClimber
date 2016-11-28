@@ -31,6 +31,7 @@ public class AddRoute extends AppCompatActivity {
     private View mLoginFormView;
     private AddRouteTask mRouteTask = null;
     private EditText groutename;
+    private EditText glength;
     private Spinner gdifficulty;
 
 
@@ -42,6 +43,7 @@ public class AddRoute extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         groutename = (EditText) findViewById(R.id.editText_routename);
+        glength = (EditText) findViewById(R.id.editText_length);
         Button saveroute_btn = (Button) findViewById((R.id.save_route_button));
         saveroute_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -171,9 +173,12 @@ public class AddRoute extends AppCompatActivity {
 
         // Reset errors.
         groutename.setError(null);
+        glength.setError(null);
+
 
         // Store values at the time of the login attempt.
         String route_name = groutename.getText().toString();
+        String route_length = glength.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -182,6 +187,12 @@ public class AddRoute extends AppCompatActivity {
         if (TextUtils.isEmpty(route_name) ) {
             groutename.setError(getString(R.string.error_field_required));
             focusView = groutename;
+            cancel = true;
+        }
+        // Check for a valid route length , if the user entered one.
+        if (TextUtils.isEmpty(route_length) ) {
+            glength.setError(getString(R.string.error_field_required));
+            focusView = glength;
             cancel = true;
         }
     //TODO do the same for the remaining required items, exact list to be submitted in Mantis

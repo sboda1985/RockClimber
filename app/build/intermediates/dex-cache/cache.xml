@@ -1,2 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="04a8c3e79fbb880062ba85506ea0b4a8ae88f58d">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4bf7a100df3c579bfc68f7608a33571f6c0a009c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_3747c7af4ad836653231ef477f90d3bc1dce3972/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_045baed44f7ddfa86ef63f520caff74d42d29471/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.1_f06d70528f3745b18a2f11797ab75e9a1579b2a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="94d5106c5901fc566facc79b517e184851b3ebb5">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_4b7bfc2c36a76b0f727a7518c15fc5ef3a3b18fb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.1.1_ec9747faabad818b7ff43e7d7d2593b1c2c7f9c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.1_c49696b6dfb8f94bdb1959bc02925f1ee8faedc1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.1_9e57170a0895f1515ae29357701aec05cf58cd8e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.1_39926d2976067ce88e35c2351bb310c6d9057878/classes.dex" />
+    </item>
+
+</items>

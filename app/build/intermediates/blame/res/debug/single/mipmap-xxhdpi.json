@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/logo.png",
+        "source": "/home/sboda/hobby/RockClimber/app/src/main/res/mipmap-xxhdpi/logo.png"
+    },
+    {
+        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/sboda/hobby/RockClimber/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

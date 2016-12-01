@@ -40,6 +40,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="ro.ubbcluj.phys.comodi.rockclimber.Views.OverView"
+            android:exported="true"
             android:label="@string/title_activity_over_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

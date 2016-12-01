@@ -30,11 +30,13 @@
             android:name=".Views.AddRoute"
             android:exported="true"
             android:label="@string/title_activity_add_route"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity
             android:name=".Views.OverView"
             android:label="@string/title_activity_over_view"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true"/>
         <activity
             android:name=".Views.RegisterActivity"
             android:label="@string/title_activity_register"></activity>

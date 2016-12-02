@@ -23,6 +23,7 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -30,24 +31,24 @@
             android:name=".Views.AddRoute"
             android:exported="true"
             android:label="@string/title_activity_add_route"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Views.OverView"
+            android:exported="true"
             android:label="@string/title_activity_over_view"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="true"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Views.RegisterActivity"
-            android:label="@string/title_activity_register"></activity>
+            android:label="@string/title_activity_register" />
         <activity
             android:name=".Views.ForgotPasswordActivity"
-            android:label="Forgot Password"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:label="Forgot Password" />
         <activity
             android:name=".Views.ResetPasswordWithPin"
-            android:label="Reset Password"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:label="Reset Password" />
+        <activity android:name=".Views.AddWall"></activity>
     </application>
 
 </manifest>

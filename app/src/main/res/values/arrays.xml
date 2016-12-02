@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    //AddRoute string arrays
+
     <string-array name="difficulty" >
         <item>V</item>
         <item>V+</item>
@@ -8,8 +11,11 @@
         <item>VI+</item>
         <item>VII-</item>
         <item>VII</item>
-
     </string-array>
+
+
+
+
     <string-array name="measure" >
         <item>m</item>
         <item>ft</item>
@@ -36,4 +42,31 @@
         <item>Nordic</item>
         <item>Brazil</item>
     </string-array>
+
+    //AddWall string-arrays
+
+    <string-array name="accessdifficulty" >
+        <item>easy</item>
+        <item>medium</item>
+        <item>difficult</item>
+        <item>very difficult</item>
+        <item>extreme</item>
+    </string-array>
+
+    <string-array name="routequality" >
+        <item>very good</item>
+        <item>good</item>
+        <item>average</item>
+        <item>bad</item>
+        <item>very bad</item>
+    </string-array>
+
+    <string-array name="popularity" >
+        <item>very popular</item>
+        <item>popular</item>
+        <item>average</item>
+        <item>not so popular</item>
+        <item>seldom visited</item>
+    </string-array>
+
 </resources>

@@ -88,6 +88,7 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
                 break;
             case R.id.fab2:
 
+                startActivity(new Intent(OverView.this, AddWall.class));
                 Log.d("Raj", "Fab 2");
                 break;
             case R.id.fab3:

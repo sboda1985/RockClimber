@@ -22,55 +22,59 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_over_view" />
+
     <FrameLayout
+        android:id="@+id/frame3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/frame3"
-        android:layout_marginBottom="230dp"
         android:layout_gravity="bottom|end"
+        android:layout_marginBottom="230dp"
         android:layout_marginRight="@dimen/fab_margin"
         android:visibility="invisible">
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:backgroundTint="@color/colorFAB3"
-        app:elevation="0dp"
-        app:pressedTranslationZ="12dp"
-        android:src="@android:drawable/ic_menu_agenda" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_agenda"
+            app:backgroundTint="@color/colorFAB3"
+            app:elevation="0dp"
+            app:pressedTranslationZ="12dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000000"
+            android:elevation="7dp"
             android:text="Add Wall"
-            android:elevation="7dp"/>
+            android:textColor="#000000" />
 
     </FrameLayout>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="160dp"
         android:layout_gravity="bottom|end"
+        android:layout_marginBottom="160dp"
         android:layout_marginRight="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_agenda"
         android:visibility="invisible"
         app:backgroundTint="@color/colorFAB2"
         app:elevation="6dp"
-        app:pressedTranslationZ="12dp"
-        android:src="@android:drawable/ic_menu_agenda" />
+        app:pressedTranslationZ="12dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="90dp"
         android:layout_gravity="bottom|end"
+        android:layout_marginBottom="90dp"
         android:layout_marginRight="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_agenda"
         android:visibility="invisible"
-        app:elevation="6dp"
         app:backgroundTint="@color/colorFAB1"
-        app:pressedTranslationZ="12dp"
-        android:src="@android:drawable/ic_menu_agenda" />
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -78,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="#ffffff"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#ffffff" />
 
 </android.support.design.widget.CoordinatorLayout>

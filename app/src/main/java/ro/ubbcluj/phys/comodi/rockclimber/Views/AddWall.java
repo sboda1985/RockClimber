@@ -9,7 +9,6 @@ import android.widget.EditText;
 import ro.ubbcluj.phys.comodi.rockclimber.R;
 
 
-
 public class AddWall extends AppCompatActivity {
 
     private EditText gwallname;
@@ -40,7 +39,6 @@ public class AddWall extends AppCompatActivity {
             private void attemptSave() {
 
             }
-
 
 
         });

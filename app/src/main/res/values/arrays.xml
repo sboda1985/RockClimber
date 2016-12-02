@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    //AddRoute string arrays
 
-    <string-array name="difficulty" >
-        <item>V</item>
-        <item>V+</item>
-        <item>VI-</item>
-        <item>VI</item>
-        <item>VI+</item>
-        <item>VII-</item>
-        <item>VII</item>
-    </string-array>
-
-
-
-
-    <string-array name="measure" >
+    <string-array name="measure">
         <item>m</item>
         <item>ft</item>
 
 
     </string-array>
-    <string-array name="climbing_method" >
+    <string-array name="climbing_method">
         <item>sport head</item>
         <item>sport second</item>
 
@@ -31,7 +17,7 @@
 
     </string-array>
 
-    <string-array name="gradingsystems" >
+    <string-array name="gradingsystems">
         <item>UIAA</item>
         <item>YDS</item>
         <item>French</item>
@@ -45,7 +31,7 @@
 
     //AddWall string-arrays
 
-    <string-array name="accessdifficulty" >
+    <string-array name="accessdifficulty">
         <item>easy</item>
         <item>medium</item>
         <item>difficult</item>
@@ -53,7 +39,7 @@
         <item>extreme</item>
     </string-array>
 
-    <string-array name="routequality" >
+    <string-array name="routequality">
         <item>very good</item>
         <item>good</item>
         <item>average</item>
@@ -61,7 +47,7 @@
         <item>very bad</item>
     </string-array>
 
-    <string-array name="popularity" >
+    <string-array name="popularity">
         <item>very popular</item>
         <item>popular</item>
         <item>average</item>

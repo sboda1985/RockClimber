@@ -38,7 +38,7 @@ public class AddRoute extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mLoginFormView = findViewById(R.id.editText_note);
-                super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_route);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,25 +59,25 @@ public class AddRoute extends AppCompatActivity {
 
         });
 
-        final Spinner gradesystem_spinner = (Spinner)  findViewById((R.id.spinner_gradeing));
-        final Spinner difficulty_spinner = (Spinner)  findViewById((R.id.spinner_difficulty));
-        gradesystem_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
-                                                          public void onItemSelected(AdapterView<?> parent, View view, int position,       long id) {
-                                                              String selected_grade = gradesystem_spinner.getSelectedItem().toString();
-                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  R.layout.spinner_properties, new GradeValues().returngrades(selected_grade));
-                                                              difficulty_spinner.setAdapter(newAdapter);
+        final Spinner gradesystem_spinner = (Spinner) findViewById((R.id.spinner_gradeing));
+        final Spinner difficulty_spinner = (Spinner) findViewById((R.id.spinner_difficulty));
+        gradesystem_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selected_grade = gradesystem_spinner.getSelectedItem().toString();
+                ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner_properties, new GradeValues().returngrades(selected_grade));
+                difficulty_spinner.setAdapter(newAdapter);
 
-                                                          }
+            }
 
-                                                          @Override
-                                                          public void onNothingSelected(AdapterView<?> parent) {
-                                                              String selected_grade = "UIAA";
-                                                              ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(),  R.layout.spinner_properties, new GradeValues().returngrades(selected_grade));
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                String selected_grade = "UIAA";
+                ArrayAdapter<String> newAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.spinner_properties, new GradeValues().returngrades(selected_grade));
 
-                                                              difficulty_spinner.setAdapter(newAdapter);
+                difficulty_spinner.setAdapter(newAdapter);
 
-                                                          }
-                                                      });
+            }
+        });
 
 
         FloatingActionButton gpsbutton = (FloatingActionButton) findViewById((R.id.gpsbuton));
@@ -95,11 +95,11 @@ public class AddRoute extends AppCompatActivity {
                 double longitude = locate.getLongitude();
                 double latitude = locate.getLatitude();
 
-                EditText ed_longitude=(EditText) findViewById(R.id.editText_longitude);
-                String stringdouble= Double.toString(longitude);
+                EditText ed_longitude = (EditText) findViewById(R.id.editText_longitude);
+                String stringdouble = Double.toString(longitude);
                 ed_longitude.setText(stringdouble);
-                EditText ed_latitude=(EditText) findViewById(R.id.editText_latitude);
-                stringdouble= Double.toString(latitude);
+                EditText ed_latitude = (EditText) findViewById(R.id.editText_latitude);
+                stringdouble = Double.toString(latitude);
                 ed_latitude.setText(stringdouble);
 
                 locate.stopUsingGPS();
@@ -114,7 +114,7 @@ public class AddRoute extends AppCompatActivity {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
         }
-         final int REQUEST_GPS_CLOCATION = 0;
+        final int REQUEST_GPS_CLOCATION = 0;
 
         if (checkSelfPermission(ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             return true;
@@ -184,18 +184,18 @@ public class AddRoute extends AppCompatActivity {
         View focusView = null;
 
         // Check for a valid route name, if the user entered one.
-        if (TextUtils.isEmpty(route_name) ) {
+        if (TextUtils.isEmpty(route_name)) {
             groutename.setError(getString(R.string.error_field_required));
             focusView = groutename;
             cancel = true;
         }
         // Check for a valid route length , if the user entered one.
-        if (TextUtils.isEmpty(route_length) ) {
+        if (TextUtils.isEmpty(route_length)) {
             glength.setError(getString(R.string.error_field_required));
             focusView = glength;
             cancel = true;
         }
-    //TODO do the same for the remaining required items, exact list to be submitted in Mantis
+        //TODO do the same for the remaining required items, exact list to be submitted in Mantis
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -209,9 +209,9 @@ public class AddRoute extends AppCompatActivity {
             mRouteTask.execute((Void) null);
         }
     }
+
     /**
      * Represents an asynchronous add route task to save the entered route into the database
-     *
      */
     public class AddRouteTask extends AsyncTask<Void, Void, Boolean> {
 
@@ -250,7 +250,7 @@ public class AddRoute extends AppCompatActivity {
         @Override
         protected void onCancelled() {
             mRouteTask = null;
-           ;
+            ;
         }
     }
 

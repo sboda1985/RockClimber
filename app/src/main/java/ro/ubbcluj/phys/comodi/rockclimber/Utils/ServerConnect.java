@@ -28,98 +28,97 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class ServerConnect extends
         AsyncTask<Void, Void, Boolean> {
-        private final String USER_AGENT = "Mozilla/5.0";
+    private final String USER_AGENT = "Mozilla/5.0";
 
-        String urlString = "http://www.yoursite.com/";
+    String urlString = "http://www.yoursite.com/";
 
-        private final String TAG = "post json example";
-        private Context context;
+    private final String TAG = "post json example";
+    private Context context;
 
 
+    public ServerConnect(Context contex) {
 
-        public ServerConnect(Context contex) {
+        this.context = contex;
 
-            this.context = contex;
+    }
+
+    @Override
+    protected void onPreExecute() {
+
+
+    }
+
+    @Override
+    protected Boolean doInBackground(Void... params) {
+        boolean status = false;
+
+        String response = "";
+
+
+        try {
+            response = performPostCall(urlString, new HashMap<String, String>() {
+
+                private static final long serialVersionUID = 1L;
+
+                {
+                    put("Accept", "application/json");
+                    put("Content-Type", "application/json");
+                }
+            });
+
+        } catch (Exception e) {
+            // displayLoding(false);
+
 
         }
 
-        @Override
-        protected void onPreExecute() {
 
-
-        }
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-            boolean status = false;
-
-            String response = "";
-
-
+        if (!response.equalsIgnoreCase("")) {
             try {
-                response = performPostCall(urlString, new HashMap<String, String>() {
 
-                    private static final long serialVersionUID = 1L;
+                //
+                JSONObject jRoot = new JSONObject(response);
+                JSONObject d = jRoot.getJSONObject("d");
 
-                    {
-                        put("Accept", "application/json");
-                        put("Content-Type", "application/json");
-                    }
-                });
-
-            } catch (Exception e) {
-                // displayLoding(false);
+                int ResultType = d.getInt("ResultType");
 
 
-            }
+                if (ResultType == 1) {
 
-
-            if (!response.equalsIgnoreCase("")) {
-                try {
-
-                    //
-                    JSONObject jRoot = new JSONObject(response);
-                    JSONObject d = jRoot.getJSONObject("d");
-
-                    int ResultType = d.getInt("ResultType");
-
-
-                    if (ResultType == 1) {
-
-                        status = true;
-
-                    }
-
-                } catch (JSONException e) {
-                    // displayLoding(false);
-                    // e.printStackTrace();
-                    Log.e(TAG, "Error " + e.getMessage());
-                } finally {
+                    status = true;
 
                 }
-            } else {
 
-
-                status = false;
-            }
-
-            return status;
-        }
-
-        @Override
-        protected void onPostExecute(Boolean result) {
-            //
-
-
-            if (result) {
-                Log.e(TAG, "8 - Update UI ..."
-);
-            } else {
-                Log.e(TAG, "8 - Finish ...");
+            } catch (JSONException e) {
+                // displayLoding(false);
+                // e.printStackTrace();
+                Log.e(TAG, "Error " + e.getMessage());
+            } finally {
 
             }
+        } else {
+
+
+            status = false;
+        }
+
+        return status;
+    }
+
+    @Override
+    protected void onPostExecute(Boolean result) {
+        //
+
+
+        if (result) {
+            Log.e(TAG, "8 - Update UI ..."
+            );
+        } else {
+            Log.e(TAG, "8 - Finish ...");
 
         }
+
+    }
 
     /**
      * the function which does the post and returns the JSonobject
@@ -128,57 +127,57 @@ public class ServerConnect extends
      * @param postDataParams
      * @return - server response to the post
      */
-        public String performPostCall(String requestURL,
-                                      HashMap<String, String> postDataParams) {
+    public String performPostCall(String requestURL,
+                                  HashMap<String, String> postDataParams) {
 
-            URL url;
-            String response = "";
-            try {
-                url = new URL(requestURL);
+        URL url;
+        String response = "";
+        try {
+            url = new URL(requestURL);
 
-                //creating the post parameters from the passed hashmap
-                String postData = "";
-                for (Map.Entry<String,String> param : postDataParams.entrySet()) {
-                    if (postData.length() != 0) postData+=("&");
-                        postData+=(URLEncoder.encode(param.getKey(),"utf-8")+"="+URLEncoder.encode(param.getValue(),"utf-8"));
+            //creating the post parameters from the passed hashmap
+            String postData = "";
+            for (Map.Entry<String, String> param : postDataParams.entrySet()) {
+                if (postData.length() != 0) postData += ("&");
+                postData += (URLEncoder.encode(param.getKey(), "utf-8") + "=" + URLEncoder.encode(param.getValue(), "utf-8"));
 
-                }
-
-                //open connection to the server
-                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                conn.setReadTimeout(15000);
-                conn.setConnectTimeout(15000);
-                //specifying that this will be a post method
-                conn.setRequestMethod("POST");
-                conn.setRequestProperty("User-Agent", USER_AGENT);
-                conn.setRequestProperty("Accept-Language", "UTF-8");
-                conn.setDoOutput(true);
-                conn.setDoInput(true);
-                //parsing the POST parameters
-                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(conn.getOutputStream());
-                outputStreamWriter.write(postData);
-                outputStreamWriter.flush();
-
-                //get the response code, useful for later debugging, if something does not go well
-                int responseCode = conn.getResponseCode();
-
-                if (responseCode == HttpsURLConnection.HTTP_OK) {
-                    //get the response and return it
-                    String line;
-                    BufferedReader br = new BufferedReader(new InputStreamReader(
-                            conn.getInputStream()));
-                    while ((line = br.readLine()) != null) {
-                        response += line;
-                    }
-                } else {
-                    //something was not right, return an empty response
-                    response = "";
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
             }
 
-            return response;
+            //open connection to the server
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setReadTimeout(15000);
+            conn.setConnectTimeout(15000);
+            //specifying that this will be a post method
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("User-Agent", USER_AGENT);
+            conn.setRequestProperty("Accept-Language", "UTF-8");
+            conn.setDoOutput(true);
+            conn.setDoInput(true);
+            //parsing the POST parameters
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(conn.getOutputStream());
+            outputStreamWriter.write(postData);
+            outputStreamWriter.flush();
+
+            //get the response code, useful for later debugging, if something does not go well
+            int responseCode = conn.getResponseCode();
+
+            if (responseCode == HttpsURLConnection.HTTP_OK) {
+                //get the response and return it
+                String line;
+                BufferedReader br = new BufferedReader(new InputStreamReader(
+                        conn.getInputStream()));
+                while ((line = br.readLine()) != null) {
+                    response += line;
+                }
+            } else {
+                //something was not right, return an empty response
+                response = "";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
+        return response;
     }
+}
 

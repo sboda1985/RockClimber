@@ -70,27 +70,27 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
-        mForgotEmailTextView= (TextView) findViewById(R.id.forgotpassword);
+        mForgotEmailTextView = (TextView) findViewById(R.id.forgotpassword);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-                                                    @Override
-                                                    public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                                                        if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                                                            attemptLogin();
-                                                            return true;
-                                                        }
-                                                        return false;
-                                                    }
-                                                });
-                mForgotEmailTextView.setOnClickListener(new View.OnClickListener(){
-                    public void onClick(View v){
-                        startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
-                    }
+            @Override
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
+                if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                    attemptLogin();
+                    return true;
                 }
-                );
+                return false;
+            }
+        });
+        mForgotEmailTextView.setOnClickListener(new View.OnClickListener() {
+                                                    public void onClick(View v) {
+                                                        startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+                                                    }
+                                                }
+        );
 
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
@@ -353,7 +353,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         @Override
         protected Boolean doInBackground(Void... params) {
 
-            return  checkpassword();
+            return checkpassword();
         }
 
         @Override
@@ -364,28 +364,29 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             if (success) {
                 //if the login was successful, go to the Overview class
                 startActivity(new Intent(LoginActivity.this, OverView.class));
-              //  finish();
+                //  finish();
             } else {
-               // mPasswordView.setError(getString(R.string.error_incorrect_password));
+                // mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.setError("The password is incorect !");
                 mPasswordView.requestFocus();
             }
         }
 
-        protected boolean checkpassword(){
+        protected boolean checkpassword() {
             ServerConnect pw = new ServerConnect(getApplicationContext());
             HashMap hm = new HashMap();
             hm.put("email", mEmail);
             hm.put("password", mPassword);
             String url = "http://comodi.phys.ubbcluj.ro:8000/checklogin/";
             String match = pw.performPostCall(url, hm);
-            if (match.contains("true")){
+            if (match.contains("true")) {
                 return true;
             } else {
                 return false;
             }
 
         }
+
         @Override
         protected void onCancelled() {
             mAuthTask = null;

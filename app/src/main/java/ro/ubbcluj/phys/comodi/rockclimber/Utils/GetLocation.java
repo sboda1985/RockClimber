@@ -32,11 +32,10 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.support.v4.app.ActivityCompat.requestPermissions;
 
 /**
- * Create this Class from tutorial : 
+ * Create this Class from tutorial :
  * http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial
- *
+ * <p>
  * For Geocoder read this : http://stackoverflow.com/questions/472313/android-reverse-geocoding-getfromlocation
- *
  */
 
 public class GetLocation extends Service implements LocationListener {
@@ -139,7 +138,7 @@ public class GetLocation extends Service implements LocationListener {
                     updateGPSCoordinates();
                 }
             }
-        } catch (SecurityException se){
+        } catch (SecurityException se) {
             Log.e(TAG, "Impossible to connect to LocationManager", se);
         } catch (Exception e) {
             //e.printStackTrace();
@@ -159,6 +158,7 @@ public class GetLocation extends Service implements LocationListener {
 
     /**
      * GPSTracker latitude getter and setter
+     *
      * @return latitude
      */
     public double getLatitude() {
@@ -171,6 +171,7 @@ public class GetLocation extends Service implements LocationListener {
 
     /**
      * GPSTracker longitude getter and setter
+     *
      * @return
      */
     public double getLongitude() {
@@ -208,9 +209,9 @@ public class GetLocation extends Service implements LocationListener {
     }
 
 
-
     /**
      * Get list of address by latitude and longitude
+     *
      * @return null or List<Address>
      */
     public List<Address> getGeocoderAddress(Context context) {
@@ -237,6 +238,7 @@ public class GetLocation extends Service implements LocationListener {
 
     /**
      * Try to get AddressLine
+     *
      * @return null or addressLine
      */
     public String getAddressLine(Context context) {
@@ -254,6 +256,7 @@ public class GetLocation extends Service implements LocationListener {
 
     /**
      * Try to get Locality
+     *
      * @return null or locality
      */
     public String getLocality(Context context) {
@@ -264,14 +267,14 @@ public class GetLocation extends Service implements LocationListener {
             String locality = address.getLocality();
 
             return locality;
-        }
-        else {
+        } else {
             return null;
         }
     }
 
     /**
      * Try to get Postal Code
+     *
      * @return null or postalCode
      */
     public String getPostalCode(Context context) {
@@ -289,6 +292,7 @@ public class GetLocation extends Service implements LocationListener {
 
     /**
      * Try to get CountryName
+     *
      * @return null or postalCode
      */
     public String getCountryName(Context context) {

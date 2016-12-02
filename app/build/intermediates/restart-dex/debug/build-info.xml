@@ -5,67 +5,33 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="1847433828765"
+    timestamp="1240775996292"
     token="2027233302268262967"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="204" />
+        duration="790" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="27" />
+        duration="195" />
     <task
         name="verifier"
-        duration="0" />
+        duration="7" />
 
     <artifact
-        location="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-        type="DEX" />
+        location="/home/sboda/hobby/RockClimber/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="1030000354954"
+        timestamp="1240775996292"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/sboda/hobby/RockClimber/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="1482459869715"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="1658806777830"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/sboda/hobby/RockClimber/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
-    <build
-        timestamp="1767153659629"
-        verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/home/sboda/hobby/RockClimber/app/build/outputs/apk/app-debug.apk"
-            type="MAIN" />
-    </build>
-    <build
-        timestamp="1847433828765"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/sboda/hobby/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

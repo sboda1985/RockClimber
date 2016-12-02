@@ -2238,7 +2238,7 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f0d003c;
         public static final int activity_add_wall=0x7f0d006a;
         public static final int activity_chooser_view_content=0x7f0d003d;
-        public static final int activity_forgot_password=0x7f0d007a;
+        public static final int activity_forgot_password=0x7f0d007c;
         public static final int activity_reset_password_with_pin=0x7f0d008f;
         public static final int alertTitle=0x7f0d0049;
         public static final int always=0x7f0d0032;
@@ -2266,7 +2266,7 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0d00ad;
         public static final int design_navigation_view=0x7f0d00ac;
         public static final int disableHome=0x7f0d000e;
-        public static final int editText4=0x7f0d0076;
+        public static final int editText4=0x7f0d0078;
         public static final int editText_latitude=0x7f0d0097;
         public static final int editText_length=0x7f0d00a6;
         public static final int editText_longitude=0x7f0d0099;
@@ -2274,7 +2274,7 @@ containing a value of this type.
         public static final int editText_routename=0x7f0d0095;
         public static final int edit_query=0x7f0d005c;
         public static final int email=0x7f0d0083;
-        public static final int email_login_form=0x7f0d0082;
+        public static final int email_login_form=0x7f0d006c;
         public static final int email_reg_in_button=0x7f0d0087;
         public static final int email_sign_in_button=0x7f0d0086;
         public static final int end=0x7f0d0020;
@@ -2284,8 +2284,8 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0d0017;
         public static final int expand_activities_button=0x7f0d003e;
         public static final int expanded_menu=0x7f0d0051;
-        public static final int f_p_email=0x7f0d007b;
-        public static final int f_p_ok=0x7f0d007e;
+        public static final int f_p_email=0x7f0d007d;
+        public static final int f_p_ok=0x7f0d0080;
         public static final int fab=0x7f0d008d;
         public static final int fab1=0x7f0d008c;
         public static final int fab2=0x7f0d008b;
@@ -2294,7 +2294,7 @@ containing a value of this type.
         public static final int fill_horizontal=0x7f0d002e;
         public static final int fill_vertical=0x7f0d0021;
         public static final int fixed=0x7f0d0037;
-        public static final int forgot_text=0x7f0d007c;
+        public static final int forgot_text=0x7f0d007e;
         public static final int forgotpassword=0x7f0d0088;
         public static final int frame3=0x7f0d0089;
         public static final int gpsbuton=0x7f0d009e;
@@ -2313,8 +2313,8 @@ containing a value of this type.
         public static final int location_image=0x7f0d00a7;
         public static final int location_name_text_view=0x7f0d00a8;
         public static final int login=0x7f0d0085;
-        public static final int login_form=0x7f0d0081;
-        public static final int login_progress=0x7f0d0080;
+        public static final int login_form=0x7f0d006b;
+        public static final int login_progress=0x7f0d0082;
         public static final int media_actions=0x7f0d00b3;
         public static final int middle=0x7f0d0031;
         public static final int mini=0x7f0d002f;
@@ -2335,7 +2335,7 @@ containing a value of this type.
         public static final int resetpasswordpin=0x7f0d0092;
         public static final int right=0x7f0d0023;
         public static final int save_route_button=0x7f0d00a4;
-        public static final int savewall_button=0x7f0d0079;
+        public static final int savewall_button=0x7f0d007b;
         public static final int screen=0x7f0d0027;
         public static final int scroll=0x7f0d0018;
         public static final int scrollIndicatorDown=0x7f0d004e;
@@ -2361,9 +2361,9 @@ containing a value of this type.
         public static final int snackbar_text=0x7f0d00a9;
         public static final int snap=0x7f0d0019;
         public static final int spacer=0x7f0d0045;
-        public static final int spinner=0x7f0d0072;
-        public static final int spinner2=0x7f0d0074;
-        public static final int spinner3=0x7f0d0078;
+        public static final int spinner=0x7f0d0074;
+        public static final int spinner2=0x7f0d0076;
+        public static final int spinner3=0x7f0d007a;
         public static final int spinner_difficulty=0x7f0d009d;
         public static final int spinner_gradeing=0x7f0d009b;
         public static final int spinner_lengthmeasure=0x7f0d00a5;
@@ -2379,14 +2379,14 @@ containing a value of this type.
         public static final int text=0x7f0d00ba;
         public static final int text2=0x7f0d00b8;
         public static final int textSpacerNoButtons=0x7f0d004d;
-        public static final int textView=0x7f0d007d;
-        public static final int textView2=0x7f0d007f;
-        public static final int textView3=0x7f0d006d;
-        public static final int textView4=0x7f0d006f;
-        public static final int textView5=0x7f0d0071;
-        public static final int textView6=0x7f0d0073;
-        public static final int textView7=0x7f0d0075;
-        public static final int textView8=0x7f0d0077;
+        public static final int textView=0x7f0d007f;
+        public static final int textView2=0x7f0d0081;
+        public static final int textView3=0x7f0d006f;
+        public static final int textView4=0x7f0d0071;
+        public static final int textView5=0x7f0d0073;
+        public static final int textView6=0x7f0d0075;
+        public static final int textView7=0x7f0d0077;
+        public static final int textView8=0x7f0d0079;
         public static final int textViewSpinnerItem=0x7f0d00bd;
         public static final int textView_diffuculty=0x7f0d009c;
         public static final int textView_gradeing=0x7f0d009a;
@@ -2405,10 +2405,10 @@ containing a value of this type.
         public static final int up=0x7f0d0009;
         public static final int useLogo=0x7f0d0014;
         public static final int view_offset_helper=0x7f0d000a;
-        public static final int wallapproach_editText=0x7f0d0070;
-        public static final int walldescription_editText=0x7f0d006e;
-        public static final int wallname_editText=0x7f0d006c;
-        public static final int wallname_texview=0x7f0d006b;
+        public static final int wallapproach_editText=0x7f0d0072;
+        public static final int walldescription_editText=0x7f0d0070;
+        public static final int wallname_editText=0x7f0d006e;
+        public static final int wallname_texview=0x7f0d006d;
         public static final int withText=0x7f0d0036;
         public static final int wrap_content=0x7f0d0039;
     }

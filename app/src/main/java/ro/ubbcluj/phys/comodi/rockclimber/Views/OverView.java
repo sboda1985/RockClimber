@@ -15,8 +15,8 @@ import ro.ubbcluj.phys.comodi.rockclimber.R;
 
 public class OverView extends AppCompatActivity implements View.OnClickListener {
     private Boolean isFabOpen = false;
-    private FloatingActionButton fab,fab1,fab2, fab3;
-    private Animation fab_open,fab_close,rotate_forward,rotate_backward;
+    private FloatingActionButton fab, fab1, fab2, fab3;
+    private Animation fab_open, fab_close, rotate_forward, rotate_backward;
     private FrameLayout layout3;
 
     @Override
@@ -25,14 +25,14 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_over_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        fab = (FloatingActionButton)findViewById(R.id.fab);
-        fab1 = (FloatingActionButton)findViewById(R.id.fab1);
-        fab2 = (FloatingActionButton)findViewById(R.id.fab2);
-        fab3 = (FloatingActionButton)findViewById(R.id.fab3);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab3 = (FloatingActionButton) findViewById(R.id.fab3);
         fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
-        fab_close = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fab_close);
-        rotate_forward = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_forward);
-        rotate_backward = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_backward);
+        fab_close = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
+        rotate_forward = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_forward);
+        rotate_backward = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_backward);
         fab.setOnClickListener(this);
         fab1.setOnClickListener(this);
         fab2.setOnClickListener(this);
@@ -42,15 +42,14 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
     }
 
 
+    public void animateFAB() {
 
-    public void animateFAB(){
-
-        if(isFabOpen){
+        if (isFabOpen) {
 
             fab.startAnimation(rotate_backward);
             fab1.startAnimation(fab_close);
             fab2.startAnimation(fab_close);
-           // fab3.startAnimation(fab_close);
+            // fab3.startAnimation(fab_close);
             layout3.startAnimation(fab_close);
             fab1.setClickable(false);
             fab2.setClickable(false);
@@ -63,13 +62,13 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
             fab.startAnimation(rotate_forward);
             fab1.startAnimation(fab_open);
             fab2.startAnimation(fab_open);
-           // fab3.startAnimation(fab_open);
+            // fab3.startAnimation(fab_open);
             layout3.startAnimation(fab_open);
             fab1.setClickable(true);
             fab2.setClickable(true);
             fab3.setClickable(true);
             isFabOpen = true;
-            Log.d("Raj","open");
+            Log.d("Raj", "open");
 
         }
     }
@@ -77,7 +76,7 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        switch (id){
+        switch (id) {
             case R.id.fab:
 
                 animateFAB();

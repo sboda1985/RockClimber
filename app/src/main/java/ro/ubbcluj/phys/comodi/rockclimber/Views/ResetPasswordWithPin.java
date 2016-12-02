@@ -105,12 +105,11 @@ public class ResetPasswordWithPin extends AppCompatActivity {
         boolean cancel = false;
         View focusView = null;
 
-        if (!password.equals(confirmpassword)){
+        if (!password.equals(confirmpassword)) {
             mConfirmPasswordView.setError(getString(R.string.error_password_not_match));
             focusView = mConfirmPasswordView;
             cancel = true;
         }
-
 
 
         // Check for a valid password, if the user entered one.
@@ -134,7 +133,7 @@ public class ResetPasswordWithPin extends AppCompatActivity {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
-           // showProgress(true);
+            // showProgress(true);
             mAuthTask = new UserLoginTask(pin, password);
             mAuthTask.execute((Void) null);
         }
@@ -149,52 +148,49 @@ public class ResetPasswordWithPin extends AppCompatActivity {
     /**
      * Shows the progress UI and hides the login form.
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
-    private void showProgress(final boolean show) {
-        // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
-        // for very easy animations. If available, use these APIs to fade-in
-        // the progress spinner.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
-            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2) private void showProgress(final boolean show) {
+     // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
+     // for very easy animations. If available, use these APIs to fade-in
+     // the progress spinner.
+     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+     int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 
-            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-            mLoginFormView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-                }
-            });
+     mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+     mLoginFormView.animate().setDuration(shortAnimTime).alpha(
+     show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+     @Override public void onAnimationEnd(Animator animation) {
+     mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+     }
+     });
 
-            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-            mProgressView.animate().setDuration(shortAnimTime).alpha(
-                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-                }
-            });
-        } else {
-            // The ViewPropertyAnimator APIs are not available, so simply show
-            // and hide the relevant UI components.
-            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-            mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
-        }
-    }
+     mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+     mProgressView.animate().setDuration(shortAnimTime).alpha(
+     show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+     @Override public void onAnimationEnd(Animator animation) {
+     mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+     }
+     });
+     } else {
+     // The ViewPropertyAnimator APIs are not available, so simply show
+     // and hide the relevant UI components.
+     mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+     mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+     }
+     }
 
 
 
 
-    private interface ProfileQuery {
-        String[] PROJECTION = {
-                ContactsContract.CommonDataKinds.Email.ADDRESS,
-                ContactsContract.CommonDataKinds.Email.IS_PRIMARY,
-        };
+     private interface ProfileQuery {
+     String[] PROJECTION = {
+     ContactsContract.CommonDataKinds.Email.ADDRESS,
+     ContactsContract.CommonDataKinds.Email.IS_PRIMARY,
+     };
 
-        int ADDRESS = 0;
-        int IS_PRIMARY = 1;
-    }
-*/
+     int ADDRESS = 0;
+     int IS_PRIMARY = 1;
+     }
+     */
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
@@ -203,11 +199,12 @@ public class ResetPasswordWithPin extends AppCompatActivity {
 
         private final String mPin;
         private final String mPassword;
-        private  String mRegerror;
+        private String mRegerror;
+
         UserLoginTask(String email, String password) {
             mPin = email;
             mPassword = password;
-            mRegerror=null;
+            mRegerror = null;
         }
 
         @Override
@@ -225,36 +222,39 @@ public class ResetPasswordWithPin extends AppCompatActivity {
                 //if the registration was successful, go to the Overview class
                 startActivity(new Intent(ResetPasswordWithPin.this, OverView.class));
             } else {
-                if(mRegerror.contains("password recovery not requested")){
+                if (mRegerror.contains("password recovery not requested")) {
                     mPinView.setError("Incorrect PIN, please try again ");
                 }
-                if(mRegerror.contains("to many attempts")){
+                if (mRegerror.contains("to many attempts")) {
                     mPinView.setError("You tried to many times to reset your password, wait a day");
                 }
 
                 mPasswordView.requestFocus();
             }
         }
-        protected boolean changepassword(){
+
+        protected boolean changepassword() {
             ServerConnect pw = new ServerConnect(getApplicationContext());
             HashMap hm = new HashMap();
             hm.put("pin", mPin);
             hm.put("password", mPassword);
             Intent myIntent = getIntent(); // gets the previously created intent
             String id = myIntent.getStringExtra("id");
-            hm.put("id",  id);
+            hm.put("id", id);
             String url = "http://comodi.phys.ubbcluj.ro:8000/resetpasswordwithpin/";
             String match = pw.performPostCall(url, hm);
             mRegerror = match;
             Log.e("asd", match);
-            if(match.contains("success")){return true;}
-           return false;
+            if (match.contains("success")) {
+                return true;
+            }
+            return false;
         }
 
         @Override
         protected void onCancelled() {
             mAuthTask = null;
-          //  showProgress(false);
+            //  showProgress(false);
         }
     }
 }

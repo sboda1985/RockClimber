@@ -48,7 +48,12 @@
             android:name=".Views.ResetPasswordWithPin"
             android:exported="true"
             android:label="Reset Password" />
-        <activity android:name=".Views.AddWall"></activity>
+
+        <activity
+            android:name=".Views.AddWall"
+            android:exported="true"
+            android:label="Add Wall" />
+
     </application>
 
 </manifest>

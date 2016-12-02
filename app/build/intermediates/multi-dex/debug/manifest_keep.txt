@@ -1,7 +1,0 @@
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.LoginActivity { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.AddRoute { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.OverView { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.RegisterActivity { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.ForgotPasswordActivity { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.ResetPasswordWithPin { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.AddWall { <init>(); }

@@ -32,21 +32,22 @@ public class GradeValues {
         }
         if (grading_system.contains("British - Adj")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_British_Adj));
-        }if (grading_system.contains("French")) {
+        }
+        if (grading_system.contains("French")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_French));
-        }if (grading_system.contains("Saxon")) {
+        }
+        if (grading_system.contains("Saxon")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_Saxon));
-        }if (grading_system.contains("Ewbank")) {
+        }
+        if (grading_system.contains("Ewbank")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_Ewbank));
-        }if (grading_system.contains("Nordic")) {
+        }
+        if (grading_system.contains("Nordic")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_Nordic));
         }
         if (grading_system.contains("Brazil")) {
             stringList = new ArrayList<String>(Arrays.asList(grade_Brazil));
         }
-
-
-
 
 
         //TODO implement for the remaining gradeing system the proper return

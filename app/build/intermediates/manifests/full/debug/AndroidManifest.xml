@@ -54,7 +54,10 @@
             android:name="ro.ubbcluj.phys.comodi.rockclimber.Views.ResetPasswordWithPin"
             android:exported="true"
             android:label="Reset Password" />
-        <activity android:name="ro.ubbcluj.phys.comodi.rockclimber.Views.AddWall" />
+        <activity
+            android:name="ro.ubbcluj.phys.comodi.rockclimber.Views.AddWall"
+            android:exported="true"
+            android:label="Add Wall" />
     </application>
 
 </manifest>

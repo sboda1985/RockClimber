@@ -162,12 +162,11 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         boolean cancel = false;
         View focusView = null;
 
-        if (!password.equals(confirmpassword)){
+        if (!password.equals(confirmpassword)) {
             mConfirmPasswordView.setError(getString(R.string.error_password_not_match));
             focusView = mConfirmPasswordView;
             cancel = true;
         }
-
 
 
         // Check for a valid password, if the user entered one.
@@ -309,11 +308,12 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
 
         private final String mEmail;
         private final String mPassword;
-        private  String mRegerror;
+        private String mRegerror;
+
         UserLoginTask(String email, String password) {
             mEmail = email;
             mPassword = password;
-            mRegerror=null;
+            mRegerror = null;
         }
 
         @Override
@@ -331,30 +331,32 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                 //if the registration was successful, go to the Overview class
                 startActivity(new Intent(RegisterActivity.this, OverView.class));
             } else {
-                if(mRegerror.contains("taken")){
+                if (mRegerror.contains("taken")) {
                     mEmailView.setError("emaail already taken");
                 }
-                if(mRegerror.contains("problem")){
+                if (mRegerror.contains("problem")) {
                     mEmailView.setError("registration unsuccesful");
                 }
 
                 mPasswordView.requestFocus();
             }
         }
-        protected boolean register(){
+
+        protected boolean register() {
             ServerConnect pw = new ServerConnect(getApplicationContext());
             HashMap hm = new HashMap();
             hm.put("email", mEmail);
             hm.put("password", mPassword);
             String url = "http://comodi.phys.ubbcluj.ro:8000/registration/";
             String match = pw.performPostCall(url, hm);
-            if(match.contains("success")){return true;}
-            else {
-                if(match.contains("taken")){
-                    mRegerror="email already taken";
+            if (match.contains("success")) {
+                return true;
+            } else {
+                if (match.contains("taken")) {
+                    mRegerror = "email already taken";
                 }
-                if(match.contains("unsuccesful")){
-                    mRegerror="there was a problem registering";
+                if (match.contains("unsuccesful")) {
+                    mRegerror = "there was a problem registering";
                 }
 
                 return false;

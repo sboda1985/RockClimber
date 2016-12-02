@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 
 import ro.ubbcluj.phys.comodi.rockclimber.R;
 
@@ -16,6 +17,7 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
     private Boolean isFabOpen = false;
     private FloatingActionButton fab,fab1,fab2, fab3;
     private Animation fab_open,fab_close,rotate_forward,rotate_backward;
+    private FrameLayout layout3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
         fab1.setOnClickListener(this);
         fab2.setOnClickListener(this);
         fab3.setOnClickListener(this);
+        layout3 = (FrameLayout) findViewById(R.id.frame3);
 
     }
 
@@ -47,7 +50,8 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
             fab.startAnimation(rotate_backward);
             fab1.startAnimation(fab_close);
             fab2.startAnimation(fab_close);
-            fab3.startAnimation(fab_close);
+           // fab3.startAnimation(fab_close);
+            layout3.startAnimation(fab_close);
             fab1.setClickable(false);
             fab2.setClickable(false);
             fab3.setClickable(false);
@@ -59,7 +63,8 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
             fab.startAnimation(rotate_forward);
             fab1.startAnimation(fab_open);
             fab2.startAnimation(fab_open);
-            fab3.startAnimation(fab_open);
+           // fab3.startAnimation(fab_open);
+            layout3.startAnimation(fab_open);
             fab1.setClickable(true);
             fab2.setClickable(true);
             fab3.setClickable(true);

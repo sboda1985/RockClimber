@@ -12,12 +12,12 @@
         "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
     },
     {
-        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
-    },
-    {
         "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
@@ -44,20 +44,20 @@
         "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
         "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/sboda/hobby/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/home/sboda/hobby/RockClimber/app/build/intermediates/res/merged/debug/layout/spinner_properties.xml",

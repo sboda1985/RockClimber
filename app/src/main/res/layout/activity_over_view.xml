@@ -22,20 +22,30 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_over_view" />
-
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame3"
+        android:layout_marginBottom="230dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:visibility="invisible">
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="230dp"
-        android:layout_gravity="bottom|end"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:visibility="invisible"
         app:backgroundTint="@color/colorFAB3"
-        app:elevation="6dp"
+        app:elevation="0dp"
         app:pressedTranslationZ="12dp"
         android:src="@android:drawable/ic_menu_agenda" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Add Wall"
+            android:elevation="7dp"/>
 
+    </FrameLayout>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"
         android:layout_width="wrap_content"

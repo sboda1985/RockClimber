@@ -1,9 +1,11 @@
 package ro.ubbcluj.phys.comodi.rockclimber.Views;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,7 @@ public class AddWall extends AppCompatActivity {
     private EditText gwalldescription;
     private EditText gwallapproach;
     private Button savewallbutton;
+    private AddWallTask mWallTask = null;
  
 
 
@@ -42,6 +45,11 @@ public class AddWall extends AppCompatActivity {
             }
 
             private void attemptSave() {
+
+                if (mWallTask != null) {
+                    return;
+                }
+
 
                 // Reset errors.
                 gwallname.setError(null);
@@ -78,14 +86,71 @@ public class AddWall extends AppCompatActivity {
                     focusView = gwallapproach;
                     cancel = true;
                 }
-            
-            
+
+
+                if (cancel) {
+                    // There was an error; don't attempt login and focus the first
+                    // form field with an error.
+                    focusView.requestFocus();
+                } else {
+                    // Show a progress spinner, and kick off a background task to
+                    // perform the user login attempt.
+                    Log.e(null, "asd");
+                    mWallTask = new AddWall.AddWallTask(wall_name,wall_description,wall_approach);
+                    mWallTask.execute((Void) null);
+
+                }
+
+
             }
 
             
 
 
         });
+    }
+
+    public class AddWallTask extends AsyncTask<Void, Void, Boolean> {
+
+        private final String wallname;
+        private final String walldescription;
+        private final String wallapproach;
+
+        AddWallTask(String name, String description , String approach) {
+            wallname = name;
+            walldescription = description;
+            wallapproach = approach;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success) {
+            mWallTask = null;
+
+
+            if (success) {
+                //if the login was successful, go to the Overview class
+                Log.d(null, "save successfull");
+                startActivity(new Intent(AddWall.this, OverView.class));
+                //  finish();
+//            } else {
+//                groutename.setError(getString(R.string.error_field_required));
+//                groutename.requestFocus();
+//            }
+            }
+        }
+
+
+        @Override
+        protected void onCancelled() {
+            mWallTask = null;
+            ;
+        }
     }
 
     

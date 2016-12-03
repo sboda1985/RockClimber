@@ -1,4 +1,4 @@
-#Fri Dec 02 23:55:53 EET 2016
+#Sat Dec 03 09:20:25 EET 2016
 base.0=/home/m0uzin/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/home/m0uzin/RockClimber/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

@@ -64,6 +64,7 @@ android/support/v7/app/ActionBar$OnNavigationListener.class
 android/support/v4/view/accessibility/AccessibilityNodeProviderCompat.class
 android/support/v7/appcompat/R.class
 android/support/v7/app/ActionBar$TabListener.class
+ro/ubbcluj/phys/comodi/rockclimber/Views/AddWall$AddWallTask.class
 android/support/v4/app/FragmentActivity$HostCallbacks.class
 ro/ubbcluj/phys/comodi/rockclimber/Views/AddRoute$1.class
 ro/ubbcluj/phys/comodi/rockclimber/Views/LoginActivity$7.class

@@ -1,53 +1,44 @@
--injars /home/m0uzin/RockClimber/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
--outjars /home/m0uzin/RockClimber/app/build/intermediates/multi-dex/debug/componentClasses.jar
+-injars /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
+-outjars /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/multi-dex/debug/componentClasses.jar
 
--libraryjars /home/m0uzin/Android/Sdk/build-tools/23.0.2/lib/shrinkedAndroid.jar
+-libraryjars /home/sboda/Android/Sdk/build-tools/23.0.2/lib/shrinkedAndroid.jar
 
 -forceprocessing
 -dontoptimize
 -dontobfuscate
 -dontusemixedcaseclassnames
 -dontpreverify
--dontnote **
+-dontnote **,com.android.tools.fd.**,android.support.multidex.MultiDexExtractor
 -dontwarn **
--printconfiguration /home/m0uzin/RockClimber/app/build/intermediates/multi-dex/debug/components.flags
+-printconfiguration /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/multi-dex/debug/components.flags
 
 
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.LoginActivity {
+-keep class org.hopto.bodaszilard.rockclimber.Views.LoginActivity {
     <init>();
 }
 
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.AddRoute {
+-keep class org.hopto.bodaszilard.rockclimber.Views.AddRoute {
     <init>();
 }
 
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.OverView {
+-keep class org.hopto.bodaszilard.rockclimber.Views.OverView {
     <init>();
 }
 
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.RegisterActivity {
+-keep class org.hopto.bodaszilard.rockclimber.Views.RegisterActivity {
     <init>();
 }
 
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.ForgotPasswordActivity {
+-keep class org.hopto.bodaszilard.rockclimber.Views.ForgotPasswordActivity {
     <init>();
 }
 
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.ResetPasswordWithPin {
+-keep class org.hopto.bodaszilard.rockclimber.Views.ResetPasswordWithPin {
     <init>();
 }
 
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.AddWall {
+-keep class org.hopto.bodaszilard.rockclimber.Views.AddWall {
     <init>();
-}
-
--keep public class * extends android.app.Instrumentation {
-    <init>();
-}
-
--keep public class * extends android.app.Application {
-    <init>();
-    void attachBaseContext(android.content.Context);
 }
 
 -keep public class * extends android.app.backup.BackupAgent {

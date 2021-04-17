@@ -1,139 +1,147 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:2:1-59:12
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:2:1-59:12
 	package
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:3:5-49
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:3:5-48
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:6:5-71
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:6:5-71
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:6:22-68
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:7:5-71
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:7:5-71
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:7:22-68
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:7:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:8:5-72
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:8:5-72
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:8:22-69
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:8:22-69
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:9:5-79
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:9:22-76
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:9:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:10:5-81
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:10:5-81
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:10:22-78
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:10:22-78
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:11:5-81
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:11:22-78
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:11:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:12:5-67
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:12:22-64
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:12:22-64
 application
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:14:5-57:19
-MERGED from [com.android.support:design:23.1.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:14:5-57:19
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:18:9-41
 	android:supportsRtl
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:19:9-35
 	android:exported
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:16:9-32
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:16:9-32
 	android:allowBackup
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:15:9-35
 	android:icon
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:17:9-43
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:17:9-43
 	android:theme
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:20:9-40
-activity#ro.ubbcluj.phys.comodi.rockclimber.Views.LoginActivity
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:21:9-29:20
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:20:9-40
+activity#org.hopto.bodaszilard.rockclimber.Views.LoginActivity
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:21:9-29:20
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:23:13-45
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:23:13-45
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:22:13-48
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:22:13-48
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:24:13-28:29
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:25:17-69
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:25:25-66
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:27:27-74
-activity#ro.ubbcluj.phys.comodi.rockclimber.Views.AddRoute
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:30:9-34:59
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:27:27-74
+activity#org.hopto.bodaszilard.rockclimber.Views.AddRoute
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:30:9-34:59
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:33:13-61
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:33:13-61
 	android:exported
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:32:13-36
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:32:13-36
 	android:theme
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:34:13-56
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:34:13-56
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:31:13-43
-activity#ro.ubbcluj.phys.comodi.rockclimber.Views.OverView
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:35:9-39:59
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:31:13-43
+activity#org.hopto.bodaszilard.rockclimber.Views.OverView
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:35:9-39:59
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:38:13-61
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:38:13-61
 	android:exported
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:37:13-36
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:37:13-36
 	android:theme
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:39:13-56
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:36:13-43
-activity#ro.ubbcluj.phys.comodi.rockclimber.Views.RegisterActivity
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:40:9-42:63
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:36:13-43
+activity#org.hopto.bodaszilard.rockclimber.Views.RegisterActivity
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:40:9-42:63
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:42:13-60
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:42:13-60
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:41:13-51
-activity#ro.ubbcluj.phys.comodi.rockclimber.Views.ForgotPasswordActivity
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:43:9-46:47
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:41:13-51
+activity#org.hopto.bodaszilard.rockclimber.Views.ForgotPasswordActivity
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:43:9-46:47
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:46:13-44
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:46:13-44
 	android:exported
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:45:13-36
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:45:13-36
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:44:13-57
-activity#ro.ubbcluj.phys.comodi.rockclimber.Views.ResetPasswordWithPin
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:47:9-50:46
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:44:13-57
+activity#org.hopto.bodaszilard.rockclimber.Views.ResetPasswordWithPin
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:47:9-50:46
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:50:13-43
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:50:13-43
 	android:exported
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:49:13-36
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:48:13-55
-activity#ro.ubbcluj.phys.comodi.rockclimber.Views.AddWall
-ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:52:9-55:40
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:48:13-55
+activity#org.hopto.bodaszilard.rockclimber.Views.AddWall
+ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:52:9-55:40
 	android:label
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:55:13-37
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:55:13-37
 	android:exported
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:54:13-36
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:54:13-36
 	android:name
-		ADDED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml:53:13-42
+		ADDED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml:53:13-42
 uses-sdk
-INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:design:23.1.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /home/m0uzin/RockClimber/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
+INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
-		INJECTED from /home/m0uzin/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sboda/Documents/hobbi/rockclimber/RockClimber/app/src/main/AndroidManifest.xml

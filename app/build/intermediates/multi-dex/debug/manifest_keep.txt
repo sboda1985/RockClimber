@@ -1,7 +1,17 @@
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.LoginActivity { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.AddRoute { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.OverView { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.RegisterActivity { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.ForgotPasswordActivity { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.ResetPasswordWithPin { <init>(); }
--keep class ro.ubbcluj.phys.comodi.rockclimber.Views.AddWall { <init>(); }
+-keep class org.hopto.bodaszilard.rockclimber.Views.LoginActivity { <init>(); }
+-keep class org.hopto.bodaszilard.rockclimber.Views.AddRoute { <init>(); }
+-keep class org.hopto.bodaszilard.rockclimber.Views.OverView { <init>(); }
+-keep class org.hopto.bodaszilard.rockclimber.Views.RegisterActivity { <init>(); }
+-keep class org.hopto.bodaszilard.rockclimber.Views.ForgotPasswordActivity { <init>(); }
+-keep class org.hopto.bodaszilard.rockclimber.Views.ResetPasswordWithPin { <init>(); }
+-keep class org.hopto.bodaszilard.rockclimber.Views.AddWall { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}
+-keep class com.android.tools.fd.** {
+    *;
+}
+-dontnote com.android.tools.fd.**,android.support.multidex.MultiDexExtractor

@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ro.ubbcluj.phys.comodi.rockclimber.Views.AddWall">
+    tools:context="org.hopto.bodaszilard.rockclimber.Views.AddWall">
 
     <ScrollView
         android:id="@+id/login_form"
@@ -54,9 +54,11 @@
                 android:layout_below="@+id/wallname_texview"
                 android:layout_marginTop="29dp"
                 android:layout_toStartOf="@+id/wallname_editText"
+
                 android:text="Description "
                 android:textSize="18sp"
-                android:textStyle="normal|bold" />
+                android:textStyle="normal|bold"
+                android:layout_toLeftOf="@+id/wallname_editText" />
 
             <EditText
                 android:id="@+id/walldescription_editText"

@@ -8,6 +8,7 @@
     tools:context=".Views.OverView">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -32,23 +33,29 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:visibility="invisible">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_agenda"
-            app:backgroundTint="@color/colorFAB3"
-            app:elevation="0dp"
-            app:pressedTranslationZ="12dp" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="7dp"
-            android:text="Add Wall"
             android:textColor="#000000" />
 
     </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="230dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_agenda"
+        android:visibility="invisible"
+        android:text="Add Region"
+        app:backgroundTint="@color/colorFAB3"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"
@@ -59,6 +66,7 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_agenda"
         android:visibility="invisible"
+        android:text="Add Region"
         app:backgroundTint="@color/colorFAB2"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp" />
@@ -72,6 +80,7 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_agenda"
         android:visibility="invisible"
+        android:text="Add Wall"
         app:backgroundTint="@color/colorFAB1"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp" />
@@ -82,7 +91,26 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:text="Add Region"
         android:src="@android:drawable/ic_input_add"
         app:backgroundTint="#ffffff" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Last Climbed Routes" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

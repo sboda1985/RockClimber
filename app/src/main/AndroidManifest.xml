@@ -54,6 +54,10 @@
             android:exported="true"
             android:label="Add Wall" />
 
+        <activity
+            android:name=".Views.AddRegion"
+            android:exported="true"
+            android:label="Add Region" />
     </application>
 
 </manifest>

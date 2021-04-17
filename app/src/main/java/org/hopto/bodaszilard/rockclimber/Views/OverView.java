@@ -49,7 +49,7 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
             fab.startAnimation(rotate_backward);
             fab1.startAnimation(fab_close);
             fab2.startAnimation(fab_close);
-            // fab3.startAnimation(fab_close);
+            fab3.startAnimation(fab_close);
             layout3.startAnimation(fab_close);
             fab1.setClickable(false);
             fab2.setClickable(false);
@@ -62,7 +62,7 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
             fab.startAnimation(rotate_forward);
             fab1.startAnimation(fab_open);
             fab2.startAnimation(fab_open);
-            // fab3.startAnimation(fab_open);
+            fab3.startAnimation(fab_open);
             layout3.startAnimation(fab_open);
             fab1.setClickable(true);
             fab2.setClickable(true);
@@ -82,18 +82,21 @@ public class OverView extends AppCompatActivity implements View.OnClickListener 
                 animateFAB();
                 break;
             case R.id.fab1:
-
                 startActivity(new Intent(OverView.this, AddRoute.class));
+                Log.d("Raj", "Fab 1");
                 break;
-            case R.id.fab2:
 
+
+            case R.id.fab2:
                 startActivity(new Intent(OverView.this, AddWall.class));
                 Log.d("Raj", "Fab 2");
                 break;
-            case R.id.fab3:
 
-                Log.d("Raj", "Fab 2");
+            case R.id.fab3:
+                startActivity(new Intent(OverView.this, AddRegion.class));
+                Log.d("Raj", "Fab 3");
                 break;
+
         }
     }
 }
